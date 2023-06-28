@@ -1,36 +1,36 @@
-## Algorytmy i struktury danych
+## Algorithms and data structures
 
-To repozytorium zawiera różne algorytmy i struktury danych zaimplementowane w różnych językach programowania. Jest ono przeznaczone jako zasób do nauki i praktycznego stosowania podstawowych koncepcji w informatyce.
+This repository contains various algorithms and data structures implemented in various programming languages. It is intended as a resource for learning and applying fundamental concepts in computer science.
 
-### Spis treści
+### Contents
 
-1. [Wprowadzenie](#wprowadzenie)
-2. [Algorytmy](#algorytmy)
-3. [Struktury danych](#struktury-danych)
-4. [Instrukcja](#instrukcja)
-5. [Współtworzenie](#współtworzenie)
-6. [Licencja](#licencja)
+1. [Introduction](#introduction)
+2. [Algorithms](#algorithms)
+3. [Data structures](#data-structures)
+4. [Manual](#Manual)
+5. [Co-creation](#co-creation)
+6. [License](#license)
 
-### Wprowadzenie
+### Introduction
 
-Zrozumienie algorytmów i struktur danych jest kluczowe dla tworzenia efektywnych i optymalizowanych rozwiązań oprogramowania. Repozytorium to ma na celu zapewnienie kolekcji dobrze zaimplementowanych algorytmów i struktur danych, wraz z szczegółowymi wyjaśnieniami i przykładami. Stanowi ono źródło informacji zarówno dla początkujących, jak i doświadczonych programistów, którzy chcą poszerzać swoją wiedzę i umiejętności rozwiązywania problemów.
+Understanding algorithms and data structures is crucial for creating effective and optimized software solutions. This repository aims to provide a collection of well-implemented algorithms and data structures, with detailed explanations and examples. It is a resource for both novice and experienced programmers who want to expand their knowledge and problem-solving skills.
 
-### Algorytmy
+### Algorithms
 
-Katalog "Algorytmy" zawiera implementacje różnych algorytmów, w tym algorytmy sortowania, wyszukiwania, grafowe i wiele innych. Każdy algorytm jest udokumentowany i zawiera wyjaśnienia dotyczące jego złożoności czasowej oraz scenariuszy użycia.
+The "Algorithms" directory contains implementations of various algorithms, including sorting, searching, graphing, and many others. Each algorithm is documented with explanations of its time complexity and usage scenarios.
 
-### Struktury danych
+### Data structures
 
-Katalog "StrukturyDanych" zawiera implementacje podstawowych struktur danych, takich jak tablice, listy jednokierunkowe, stosy, kolejki, drzewa i grafy. Każda struktura danych jest opisana wraz z pełnym wyjaśnieniem jej właściwości, operacji i przypadków użycia.
+The DataStructures directory contains implementations of basic data structures such as arrays, link lists, stacks, queues, trees, and graphs. Each data structure is described with a full explanation of its properties, operations and use cases.
 
-### Instrukcja
+### Instruction
 
-Zapraszamy do zapoznania się z kodem w tym repozytorium i wykorzystania go do celów edukacyjnych, treningu programowania lub jako źródło informacji dla własnych projektów. Każdy algorytm i struktura danych jest dostarczany jako oddzielny plik lub moduł, co ułatwia integrację z własnym projektem. Wystarczy przejść do odpowiedniego katalogu i wybrać preferowany język programowania.
+We invite you to familiarize yourself with the code in this repository and use it for educational purposes, programming training or as a source of information for your own projects. Each algorithm and data structure is delivered as a separate file or module, making it easy to integrate into your own project. Just go to the appropriate directory and select your preferred programming language.
 
-### Współtworzenie
+### Co-creation
 
-Wszelkie wkłady do tego repozytorium są mile widziane! Jeśli masz jakieś ulepszenia, poprawki błędów lub nowe algorytmy/struktury danych do dodania, zachęcamy do składania wniosków o zmianę. Prosimy o przestrzeganie ustalonego stylu kodowania i dostarczanie czytelnej dokumentacji dla wprowadzanych zmian.
+Any contributions to this repository are welcome! If you have any improvements, bug fixes or new algorithms/data structures to add, feel free to submit a change request. Please respect the established coding style and provide clear documentation for the changes you make.
 
-### Licencja
+### License
 
-To repozytorium jest licencjonowane
+This repository is licensed
