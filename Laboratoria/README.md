@@ -60,7 +60,7 @@ Ciąg binarny b1, b2, ..., bn może posłużyć do wygenerowania dowolnego podzb
 ```
 
 Oto program, który realizuje powyższy algorytm:
-```
+```java
    class Podzbiory1
    {
      public static void main(String[] args)
@@ -116,7 +116,7 @@ Aby wygenerować wszystkie podzbiory zbioru X = {1,2,...,n}, dla dowolnie ustalo
     b) dodaj 1 do liczby dwójkowej z tablicy.
     
 Oto program, który realizuje powyższy algorytm:
-```
+```java
    class Podzbiory2
    {
      public static void main(String[] args)
@@ -176,7 +176,7 @@ procedura permutacje(l: lista elementów)
      c) usuń element i z końca listy.
      
 Oto program, który realizuje powyższy algorytm:
-```
+```java
    class Permutacje
    {
      final static int N = 3; // permutacje n-elementowe
@@ -224,7 +224,7 @@ Powyższy program wypisuje następujący tekst:
 Pierwszy i drugi wyraz ciągu Fibonacciego ma wartość 1, a każdy kolejny wyraz ciągu jest sumą dwóch poprzednich wyrazów ciągu. Zwróćmy uwagę, że powyższa definicja odpowiada idei metody „dziel i zwyciężaj”. Aby wyznaczyć n-ty wyraz ciągu Fibonacciego należy najpierw wyznaczyć n − 1 oraz n − 2 wyraz ciągu, czyli rozwiązać podproblemy o mniejszym rozmiarze.
 
 Oto program, który wyznacza n-ty wyraz ciągu Fibonacciego:
-```
+```java
    class FiboDZ
    {
      public static void main(String[] args)
@@ -246,7 +246,7 @@ Analiza wywołania metody fibo(5) prowadzi do grafu wywołań z rys. 2.1. Każdy
 Niektóre problemy wymagają rozwiązania na danym etapie obliczeń tylko jednego podpro- blemu o mniejszym rozmiarze. Dla przykładu, aby wyznaczyć wartość n! wystarczy wyznaczyć wartość (n − 1)! i pomnożyć ją przez n.
 
 Oto program, który oblicza wartość n silnia:
-```
+```java
 class SilniaDZ
 {
   public static void main(String[] args)
@@ -275,7 +275,7 @@ Podamy jeszcze jeden przykład problemu, który można rozwiązać metodą „dz
 była największa (patrz podrozdział A.1).
 
 Oto program, który formalizuje powyższe rozważania:
-```
+```java
 class PlecakDec
 {
   final static int N = 6;                // liczba przedmiotów
@@ -301,7 +301,7 @@ class PlecakDec
 ```
 
 Podamy teraz analogiczny program, który oprócz wartości plecaka wypisuje również numery przedmiotów zapakowanych do plecaka:
-```
+```java
 class PlecakDecWyp
 {
    final static int N=6; // liczba wszystkich przedmiotow final static int MAX_V = 10; // objetosc plecaka
@@ -351,7 +351,7 @@ static Plecak P(int i, int v)
   else
    return p1; }
 }
-```java
+```
 
 W powyższym programie plecak reprezentowany jest przez obiekt klasy Plecak. Atrybuty obiektów klasy Plecak określone są przez zmienną wartosc, która przechowuje wartość plecaka oraz przez zmienną zawartosc, która przechowuje referencję do tablicy przedmiotów z plecaka. Jeśli i-ty przedmiot znajduje się w plecaku, to w tablicy, w komórce z indeksem i mamy liczbę 1. Jeśli w plecaku i-ty przedmiot się nie znajduje, to w tablicy, w komórce z indeksem i mamy liczbę 0.
 Metoda statyczna P(int i, int v) zwraca plecak o objętości v i maksymalnej wartości, zapakowany spośród przedmiotów ponumerowanych od 0 do i.
