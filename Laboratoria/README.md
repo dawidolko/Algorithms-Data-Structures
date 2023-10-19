@@ -270,9 +270,12 @@ class SilniaDZ
    }
 }
 ```
+
 Podamy jeszcze jeden przykład problemu, który można rozwiązać metodą „dziel i zwyciężaj”. Dany jest plecak o objętości v oraz n przedmiotów ponumerowanych od 0 do n − 1. Każdy przedmiot ma określoną wartość Wi i objętość Vi. Należy zapakować plecak spośród przedmiotów ponumerowanych od 0 do n − 1 w taki sposób, aby wartość przedmiotów w nim zgromadzonych
 była największa (patrz podrozdział A.1).
+
 Oto program, który formalizuje powyższe rozważania:
+```
 class PlecakDec
 {
   final static int N = 6;                // liczba przedmiotów
@@ -281,31 +284,75 @@ class PlecakDec
   final static int[] W = {6,4,5,7,10,2}; // wartości przedmiotów
   static int P(int i, int v)
 {
-int w1; // wartość, gdy nie bierzemy i-tego przedmiotu int w2; // wartość, gdy bierzemy i-ty przedmiot if(i==0&&v<V[0]) return0;
-if (i == 0 && v >= V[0]) return W[0];
-w1 = P(i-1,v);
-if (i > 0 && v < V[i]) return w1;
-w2 = W[i] + P(i-1,v-V[i]);
-if (w2 > w1) // gdy i > 0 && v >= V[i]
+      int w1; // wartość, gdy nie bierzemy i-tego przedmiotu int w2; // wartość, gdy bierzemy i-ty przedmiot if(i==0&&v<V[0]) return0;
+      if (i == 0 && v >= V[0]) return W[0];
+      w1 = P(i-1,v);
+      if (i > 0 && v < V[i]) return w1;
+      w2 = W[i] + P(i-1,v-V[i]);
+      if (w2 > w1) // gdy i > 0 && v >= V[i]
       return w2;
     else
-return w1; }
+      return w1; }
   public static void main(String[] args)
   {
     System.out.println("Wartosc przedmiotow: " + P(N-1,MAX_V));
   }
 }
+```
+
 Podamy teraz analogiczny program, który oprócz wartości plecaka wypisuje również numery przedmiotów zapakowanych do plecaka:
+```
 class PlecakDecWyp
 {
-final static int N=6; // liczba wszystkich przedmiotow final static int MAX_V = 10; // objetosc plecaka
-final static int[] V = {6,2,3,2,3,1}; // objetosci przedmiotow
-final static int[] W = {6,4,5,7,10,2}; // wartosci przedmiotow
+   final static int N=6; // liczba wszystkich przedmiotow final static int MAX_V = 10; // objetosc plecaka
+   final static int[] V = {6,2,3,2,3,1}; // objetosci przedmiotow
+   final static int[] W = {6,4,5,7,10,2}; // wartosci przedmiotow
   static class Plecak
   {
-int wartosc;
+   int wartosc;
     int[] zawartosc = new int[N];
   }
   public static void main(String[] args)
   {
     Plecak p = P(N-1,MAX_V);
+   System.out.println("Wartosc plecaka: " + p.wartosc);
+   System.out.print("Przedmioty w plecaku: ");
+  for (int i = 0; i < N; i++)
+    if (p.zawartosc[i] == 1) System.out.print(i + " ");
+  System.out.println();
+}
+static Plecak P(int i, int v)
+{
+  Plecak p1 = new Plecak(); // plecak, gdy nie bierzemy i-tego przedmiotu
+  Plecak p2 = new Plecak(); // plecak, gdy bierzemy i-ty przedmiot
+  if (i == 0 && v < V[0])
+  {
+    p1.zawartosc[0] = 0;
+    p1.wartosc = 0;
+    return p1;
+  }
+  if (i == 0 && v >= V[0])
+  {
+    p2.zawartosc[0] = 1;
+    p2.wartosc = W[0];
+    return p2;
+  }
+  Plecak p = P(i-1,v);
+  p1.zawartosc = p.zawartosc;
+  p1.zawartosc[i] = 0;
+  p1.wartosc = p.wartosc;
+  if (i > 0 && v < V[i]) return p1;
+  p = P(i-1,v-V[i]);
+  p2.zawartosc = p.zawartosc;
+  p2.zawartosc[i] = 1;
+  p2.wartosc = W[i] + p.wartosc;
+  if (p2.wartosc > p1.wartosc) // gdy i > 0 && v >= V[i]
+    return p2;
+  else
+   return p1; }
+}
+```
+
+W powyższym programie plecak reprezentowany jest przez obiekt klasy Plecak. Atrybuty obiektów klasy Plecak określone są przez zmienną wartosc, która przechowuje wartość plecaka oraz przez zmienną zawartosc, która przechowuje referencję do tablicy przedmiotów z plecaka. Jeśli i-ty przedmiot znajduje się w plecaku, to w tablicy, w komórce z indeksem i mamy liczbę 1. Jeśli w plecaku i-ty przedmiot się nie znajduje, to w tablicy, w komórce z indeksem i mamy liczbę 0.
+Metoda statyczna P(int i, int v) zwraca plecak o objętości v i maksymalnej wartości, zapakowany spośród przedmiotów ponumerowanych od 0 do i.
+
