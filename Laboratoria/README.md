@@ -1,6 +1,6 @@
 ### A.1 Decyzyjny problem plecakowy
 
-Dany jest plecak o pojemności \( W = 10 \) `oraz` \( 6 \) przedmiotów ponumerowanych od \( 0 \) do \( 5 \). Każdy przedmiot ma określoną wartość i objętość. Należy zapakować plecak spośród przedmiotów ponumerowanych od \( 0 \) do \( 5 \) w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
+Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowanych od \( 0 \) do \( 5 \). Każdy przedmiot ma określoną wartość i objętość. Należy zapakować plecak spośród przedmiotów ponumerowanych od \( 0 \) do \( 5 \) w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
 
 |   | 0 | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|---|
@@ -159,3 +159,153 @@ Program ten wypisuje następujący tekst:
 ```
 
 Z problemem generowania podzbiorów spotykamy się w wielu praktycznych zagadnieniach. Na przykład w decyzyjnym problemie plecakowym (patrz podrozdział A.1) potencjalnymi roz- wiązaniami problemu są podzbiory zbioru wszystkich przedmiotów pakowanych do plecaka. Po- dobnie w problemie doboru załogi statku kosmicznego (patrz podrozdział A.4) potencjalnymi rozwiązaniami są podzbiory zbioru kosmonautów.
+
+###PPermutacje
+
+Z permutacjami spotykamy się w wielu praktycznych problemach. Na przykład w problemie wyprodukowania lodów wszystkich smaków (patrz podrozdział A.5) rozwiązanie tego problemu jest permutacją zbioru smaków.
+Stosując strategię z powracaniem, problem wypisywania wszystkich permutacji zbioru {1, ..., n} można rozwiązać za pomocą następującej procedury.
+procedura permutacje(l: lista elementów)
+
+  Jeśli liczba elementów na liście l jest równa n, to:
+     wypisz elementy z listy l,
+  w przeciwnym razie, dla każdego elementu i ze zbioru {1,...,n},
+  
+  którego nie ma jeszcze na liście l wykonuj:
+     a) dodaj element i na koniec listy l,
+     b) wywołaj rekurencyjnie: permutacje(l),
+     c) usuń element i z końca listy.
+     
+Oto program, który realizuje powyższy algorytm:
+```
+   class Permutacje
+   {
+     final static int N = 3; // permutacje n-elementowe
+     private static int[] l = new int[N];
+     public static void main(String[] args)
+     {
+       permutacje(0);
+     }
+     static void permutacje(int i)
+     {
+      if (i == N) {
+               for(int j = 0; j < N; j++)
+                 System.out.print(l[j] + " ");
+               System.out.println();
+       }
+      else {
+         for (int j = 1; j <= N; j++)
+         {
+           int k;
+           for (k = 0; k < i; k++)
+             if (l[k] == j) break;
+           if (k == i)
+           {
+             l[k] = j;
+             permutacje(i+1);
+           }
+      }
+      }
+   }
+}
+```
+
+Powyższy program wypisuje następujący tekst:
+```
+123
+132
+213
+231
+312
+321
+```
+
+###FiboDZ
+
+Pierwszy i drugi wyraz ciągu Fibonacciego ma wartość 1, a każdy kolejny wyraz ciągu jest sumą dwóch poprzednich wyrazów ciągu. Zwróćmy uwagę, że powyższa definicja odpowiada idei metody „dziel i zwyciężaj”. Aby wyznaczyć n-ty wyraz ciągu Fibonacciego należy najpierw wyznaczyć n − 1 oraz n − 2 wyraz ciągu, czyli rozwiązać podproblemy o mniejszym rozmiarze.
+
+Oto program, który wyznacza n-ty wyraz ciągu Fibonacciego:
+```
+   class FiboDZ
+   {
+     public static void main(String[] args)
+     {
+       final int N = 5; // n-ty wyraz ciągu
+       System.out.println(fibo(N));
+     }
+     static int fibo(int n)
+     {
+       if (n == 1 || n == 2)
+         return 1;
+       else
+         return fibo(n-1) + fibo(n-2);
+      }
+}
+```
+
+Analiza wywołania metody fibo(5) prowadzi do grafu wywołań z rys. 2.1. Każdy liść (za- kreskowany wierzchołek) tego grafu reprezentuje problem elementarny. Natomiast każdy inny wierzchołek grafu reprezentuje problem złożony o rozmiarze n ≥ 3, który dzielony jest na dwa podproblemy o rozmiarach n−1 i n−2. Zauważmy, że w powyższym algorytmie pewne obliczenia są powtarzane wielokrotnie (np. obliczenie fibo(3)). Aby uniknąć takiej sytuacji, do rozwiązania problemu Fibonacciego zamiast metody „dziel i zwyciężaj” należy zastosować pokrewną metodę programowania dynamicznego (patrz podrozdział 2.4).
+Niektóre problemy wymagają rozwiązania na danym etapie obliczeń tylko jednego podpro- blemu o mniejszym rozmiarze. Dla przykładu, aby wyznaczyć wartość n! wystarczy wyznaczyć wartość (n − 1)! i pomnożyć ją przez n.
+
+Oto program, który oblicza wartość n silnia:
+```
+class SilniaDZ
+{
+  public static void main(String[] args)
+  {
+      fibo(3)
+          fibo(3)
+      fibo(2)
+      fibo(2)
+      fibo(1)
+        fibo(2)
+      fibo(1)
+     final int N = 5; // liczymy n!
+    System.out.println(silnia(N));
+  }
+  static int silnia(int n)
+  {
+    if (n == 0 || n == 1)
+      return 1;
+    else
+      return n * silnia(n-1);
+   }
+}
+```
+Podamy jeszcze jeden przykład problemu, który można rozwiązać metodą „dziel i zwyciężaj”. Dany jest plecak o objętości v oraz n przedmiotów ponumerowanych od 0 do n − 1. Każdy przedmiot ma określoną wartość Wi i objętość Vi. Należy zapakować plecak spośród przedmiotów ponumerowanych od 0 do n − 1 w taki sposób, aby wartość przedmiotów w nim zgromadzonych
+była największa (patrz podrozdział A.1).
+Oto program, który formalizuje powyższe rozważania:
+class PlecakDec
+{
+  final static int N = 6;                // liczba przedmiotów
+  final static int MAX_V = 10;           // objetość plecaka
+  final static int[] V = {6,2,3,2,3,1};  // objetości przedmiotów
+  final static int[] W = {6,4,5,7,10,2}; // wartości przedmiotów
+  static int P(int i, int v)
+{
+int w1; // wartość, gdy nie bierzemy i-tego przedmiotu int w2; // wartość, gdy bierzemy i-ty przedmiot if(i==0&&v<V[0]) return0;
+if (i == 0 && v >= V[0]) return W[0];
+w1 = P(i-1,v);
+if (i > 0 && v < V[i]) return w1;
+w2 = W[i] + P(i-1,v-V[i]);
+if (w2 > w1) // gdy i > 0 && v >= V[i]
+      return w2;
+    else
+return w1; }
+  public static void main(String[] args)
+  {
+    System.out.println("Wartosc przedmiotow: " + P(N-1,MAX_V));
+  }
+}
+Podamy teraz analogiczny program, który oprócz wartości plecaka wypisuje również numery przedmiotów zapakowanych do plecaka:
+class PlecakDecWyp
+{
+final static int N=6; // liczba wszystkich przedmiotow final static int MAX_V = 10; // objetosc plecaka
+final static int[] V = {6,2,3,2,3,1}; // objetosci przedmiotow
+final static int[] W = {6,4,5,7,10,2}; // wartosci przedmiotow
+  static class Plecak
+  {
+int wartosc;
+    int[] zawartosc = new int[N];
+  }
+  public static void main(String[] args)
+  {
+    Plecak p = P(N-1,MAX_V);
