@@ -1,5 +1,6 @@
-public class A5 {
-    static int[][] times = {
+public class Main {
+
+    static int[][] czasy = {
             {0, 7, 20, 21, 12, 23},
             {27, 0, 13, 16, 46, 5},
             {53, 15, 0, 25, 27, 6},
@@ -8,53 +9,53 @@ public class A5 {
             {28, 24, 1, 17, 5, 0}
     };
 
-    static int minTime = Integer.MAX_VALUE;
-    static int[] optimalOrder = new int[7];
-    static int[] currentOrder = new int[7];
-    static boolean[] visited = new boolean[6];
+    static int minimalnyCzas = Integer.MAX_VALUE;
+    static int[] optymalnaKolejnosc = new int[7];
+    static int[] aktualnaKolejnosc = new int[7];
+    static boolean[] odwiedzone = new boolean[6];
 
     public static void main(String[] args) {
-        currentOrder[0] = currentOrder[6] = 0; // Zakładamy, że zaczynamy i kończymy na smaku 1
+        aktualnaKolejnosc[0] = aktualnaKolejnosc[6] = 0;
         for (int i = 1; i < 6; i++) {
-            visited[i] = true;
-            currentOrder[1] = i;
-            findOptimalOrder(i, 2);
-            visited[i] = false;
+            odwiedzone[i] = true;
+            aktualnaKolejnosc[1] = i;
+            znajdzOptymalnaKolejnosc(i, 2);
+            odwiedzone[i] = false;
         }
 
         System.out.print("Najlepsza kolejność: ");
         for (int i = 1; i <= 6; i++) {
-            System.out.print((optimalOrder[i] + 1) + " "); // +1 aby dostosować do indeksów bazujących na 1
+            System.out.print((optymalnaKolejnosc[i]+1) + " ");
         }
-        System.out.println("\nNajmniejszy czas: " + minTime);
+        System.out.println("\nNajmniejszy czas: " + minimalnyCzas);
     }
 
-    public static void findOptimalOrder(int last, int depth) {
-        if (depth == 6) {
-            int totalTime = 0;
+    public static void znajdzOptymalnaKolejnosc(int ostatni, int glebokosc) {
+        if (glebokosc == 6) {
+            int calkowityCzas = 0;
             for (int i = 0; i < 6; i++) {
-                totalTime += times[currentOrder[i]][currentOrder[i+1]];
+                calkowityCzas += czasy[aktualnaKolejnosc[i]][aktualnaKolejnosc[i+1]];
+//                System.out.println(calkowityCzas);
             }
-            if (totalTime < minTime) {
-                minTime = totalTime;
-                for (int i = 0; i < 7; i++) {
-                    optimalOrder[i] = currentOrder[i];
-                }
+            if (calkowityCzas < minimalnyCzas) {
+                minimalnyCzas = calkowityCzas;
+                System.arraycopy(aktualnaKolejnosc, 0, optymalnaKolejnosc, 0, 7);
             }
-            System.out.print("Sprawdzana kolejność: 1 "); // Zakładamy że zawsze zaczynamy od 1
+            System.out.print("Sprawdzana kolejność: 1 ");
             for (int i = 1; i < 6; i++) {
-                System.out.print((currentOrder[i] + 1) + " "); // +1 aby dostosować do indeksów bazujących na 1
+                System.out.print((aktualnaKolejnosc[i] + 1) + " ");
             }
-            System.out.println(", Czas: " + totalTime);
+            System.out.println(", Czas: " + calkowityCzas);
             return;
         }
 
         for (int i = 1; i < 6; i++) {
-            if (!visited[i]) {
-                visited[i] = true;
-                currentOrder[depth] = i;
-                findOptimalOrder(i, depth+1);
-                visited[i] = false;
+            if (!odwiedzone[i]) {
+//                System.out.printf(""+i);
+                odwiedzone[i] = true;
+                aktualnaKolejnosc[glebokosc] = i;
+                znajdzOptymalnaKolejnosc(i, glebokosc+1);
+                odwiedzone[i] = false;
             }
         }
     }
