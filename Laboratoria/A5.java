@@ -1,4 +1,4 @@
-public class Main {
+public class A5 {
     static int[][] times = {
             {0, 7, 20, 21, 12, 23},
             {27, 0, 13, 16, 46, 5},
