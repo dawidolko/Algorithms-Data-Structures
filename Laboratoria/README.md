@@ -48,7 +48,7 @@ Znaleźć kolejność produkcji, przy której całkowity czas przestrojenia masz
 
 Odp: Minimalny całkowity czas przestrojenia maszyny wynosi 63. Oto przykładowa kolejność produkcji lodów, dla której całkowity czas przestrojenia maszyny jest minimalny: 1,2,6,5,3,4,1.
 
-### Podzbiory1
+### [Podzbiory1](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/Podzbiory1.java)
 
 Ciąg binarny b1, b2, ..., bn może posłużyć do wygenerowania dowolnego podzbioru zbioru n-elementowego. Przy małej liczbie elementów zbioru X, wszystkie jego podzbiory można wygenerować przy pomocy n-krotnie zagnieżdżonej pętli for. W przypadku zbioru cztero- elementowego otrzymujemy następujący algorytm:
 ```
@@ -102,7 +102,7 @@ Program ten wypisuje następujący tekst:
 {1234}
 ```
 
-##Podzbiory2
+## [Podzbiory2](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/Podzbiory2.java)
 
 Aby wygenerować wszystkie podzbiory zbioru X = {1,2,...,n}, dla dowolnie ustalonego n, musimy wykorzystać inną metodę. Zauważmy, że każdy ciąg binarny b1, b2, ..., bn odpowiada wzajemnie jednoznacznie liczbie dwójkowej b1b2...bn z przedziału od 0 do 2n − 1. Wszystkie liczby całkowite z przedziału od 0 do 2n − 1 możemy wygenerować zaczynając od 0 i dodając w każdym kolejnym kroku liczbę 1, a ich reprezentacje binarne określą wszystkie podzbiory zbioru n-elementowego. Otrzymujemy następujący algorytm:
  1. Utwórz n+1 elementową tablicę liczb całkowitych.
@@ -160,7 +160,7 @@ Program ten wypisuje następujący tekst:
 
 Z problemem generowania podzbiorów spotykamy się w wielu praktycznych zagadnieniach. Na przykład w decyzyjnym problemie plecakowym (patrz podrozdział A.1) potencjalnymi roz- wiązaniami problemu są podzbiory zbioru wszystkich przedmiotów pakowanych do plecaka. Po- dobnie w problemie doboru załogi statku kosmicznego (patrz podrozdział A.4) potencjalnymi rozwiązaniami są podzbiory zbioru kosmonautów.
 
-###Permutacje / PermutacjeDebug
+### [Permutacje](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/Permutacje.java) / [PermutacjeDebug](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/PermutacjeDebug.java)
 
 Z permutacjami spotykamy się w wielu praktycznych problemach. Na przykład w problemie wyprodukowania lodów wszystkich smaków (patrz podrozdział A.5) rozwiązanie tego problemu jest permutacją zbioru smaków.
 Stosując strategię z powracaniem, problem wypisywania wszystkich permutacji zbioru {1, ..., n} można rozwiązać za pomocą następującej procedury.
@@ -219,7 +219,7 @@ Powyższy program wypisuje następujący tekst:
 321
 ```
 
-###FiboDZ
+### [FiboDZ](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/FiboDZ.java)
 
 Pierwszy i drugi wyraz ciągu Fibonacciego ma wartość 1, a każdy kolejny wyraz ciągu jest sumą dwóch poprzednich wyrazów ciągu. Zwróćmy uwagę, że powyższa definicja odpowiada idei metody „dziel i zwyciężaj”. Aby wyznaczyć n-ty wyraz ciągu Fibonacciego należy najpierw wyznaczyć n − 1 oraz n − 2 wyraz ciągu, czyli rozwiązać podproblemy o mniejszym rozmiarze.
 
