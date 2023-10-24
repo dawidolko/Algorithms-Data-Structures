@@ -38,11 +38,11 @@ Fabryka lodów każdego dnia produkuje na tej samej maszynie lody o sześciu ró
 | \( \ \)  | 1 | 2 | 3 | 4 | 5 | 6 |
 |---------|---|---|---|---|---|---|
 | **1**   | 0 | 7 | 20 | 21 | 12 | 23 |
-| **2**   | 27 | 0 | 13 | 16 | 45 | 5 |
+| **2**   | 27 | 0 | 13 | 16 | 46 | 5 |
 | **3**   | 53 | 15 | 0 | 25 | 27 | 6 |
-| **4**   | 16 | 2 | 5 | 0 | 4 | 10 |
-| **5**   | 18 | 29 | 18 | 17 | 0 | 4 |
-| **6**   | 28 | 24 | 1 | 65 | 5 | 0 |
+| **4**   | 16 | 2 | 5 | 0 | 47 | 10 |
+| **5**   | 31 | 29 | 5 | 18 | 0 | 4 |
+| **6**   | 28 | 24 | 1 | 17 | 5 | 0 |
 
 Znaleźć kolejność produkcji, przy której całkowity czas przestrojenia maszyny jest mini- malny. Przyjąć, że na koniec dnia maszyna ma być przygotowana do produkcji w następnym dniu.
 
