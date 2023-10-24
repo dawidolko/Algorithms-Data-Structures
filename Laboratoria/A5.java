@@ -39,7 +39,6 @@ public class Main {
     public static void znajdzOptymalnaKolejnosc(int ostatni, int glebokosc) {
         // Jeśli przeszliśmy przez wszystkie smaki, obliczamy czas przestrojenia dla danej kolejności
         if (glebokosc == 6) {
-        if (glebokosc == 6) {
             int calkowityCzas = 0;
             for (int i = 0; i < 6; i++) {
                 calkowityCzas += czasy[aktualnaKolejnosc[i]][aktualnaKolejnosc[i+1]];
