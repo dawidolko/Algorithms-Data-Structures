@@ -1,4 +1,4 @@
-### A.1 Decyzyjny problem plecakowy
+### [A.1](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A1.java) Decyzyjny problem plecakowy
 
 Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowanych od \( 0 \) do \( 5 \). Każdy przedmiot ma określoną wartość i objętość. Należy zapakować plecak spośród przedmiotów ponumerowanych od \( 0 \) do \( 5 \) w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
 
@@ -9,7 +9,7 @@ Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowa
 
 Odp: W plecaku o maksymalnej wartości znajdują się przedmioty 1,2,3,4 o wartości 26.
 
-### A.2 Ogólny problem plecakowy
+### [A.2](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A2.java) Ogólny problem plecakowy
 
 Dany jest plecak o objętości v = 23 oraz nieograniczona liczba egzemplarzy 6 różnych przed- miotów ponumerowanych od 0 do 5. Każdy przedmiot ma określoną wartość Wi i objętość Vi. Należy zapakować plecak spośród przedmiotów ponumerowanych od 0 do 5 w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
 
@@ -21,17 +21,17 @@ Dany jest plecak o objętości v = 23 oraz nieograniczona liczba egzemplarzy 6 r
 Odp: W plecaku o maksymalnej wartości znajdzie się dziesięć przedmiotów z numerem 3 i jeden
 przedmiot z numerem 4. Łączna wartość przedmiotów w plecaku wyniesie 80.
 
-### A.3 Problem liczby pitagorejskich
+### [A.3](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A3.java) Problem liczby pitagorejskich
 
 Liczby pitagorejskie - to trzy liczby naturalne x, y, z, które spełniają warunek x2 + y2 = z2. Znaleźć wszystkie takie trójki liczb, przy założeniu, że każda z tych liczb ma należy do zbioru {1, ..., 30}.
 
-### A.4 Problem doboru załogi statku kosmicznego / Podzbiory2Kosmos
+### [A.4](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A4.java) Problem doboru załogi statku kosmicznego / Podzbiory2Kosmos
 
 Organizowana jest załogowa ekspedycja kosmiczna na Marsa. W ramach kompletowania załogi statku kosmicznego główny organizator ekspedycji ma rozwiązać następujący problem. Do jego dyspozycji jest pięciu kosmonautów (k1, k2, k3, k4, k5), którzy przeszli pozytywnie kwalifikację wstępną do udziału w ekspedycji. Na pokładzie specjalnego statku kosmicznego spośród nich będzie potrzebny przynajmniej jeden specjalista w każdej z dziedzin: A, B, C i D. Wiadomym jest, że w dziedzinie A specjalizują się kosmonauci k1 i k4, w dziedzinie B specjalizują się kosmonauci k2, k3 i k4, w dziedzinie C specjalizują się kosmonauci k3 i k5 oraz w dziedzinie D specjalizują się kosmonauci k1, k2 i k5. Ze względu na szczupłość miejsca na pokładzie statku kosmicznego, z powyższej piątki trzeba wybrać jak najmniejszą grupkę kosmonautów, tak aby znajdował się w niej przynajmniej jeden specjalista w każdej z dziedzin A, B, C, D.
 
 Odp: Na Marsa mogą polecieć np. kosmonauci k4 i k5.
 
-### A.5 Problem wyprodukowania lodów wszystkich smaków
+### [A.5](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A5.java) Problem wyprodukowania lodów wszystkich smaków
 
 Fabryka lodów każdego dnia produkuje na tej samej maszynie lody o sześciu różnych smakach. Zmiana produkcji ze smaku \( i \) na smak \( j \) wymaga przestojenia maszyny, czyli przygotowania (w tym umycia) do nowej produkcji, które trwa określony czas. Podana niżej tablica zawiera informacje o czasach przestojenia maszyny.
 
