@@ -1,7 +1,8 @@
-public class Main {
+package asd_lab_1;
 
-     // Tablica przechowująca czasy przestrojenia maszyny dla różnych smaków
-    static int[][] czasy = {
+public class A5 {
+
+    private static int[][] czasy = {
             {0, 7, 20, 21, 12, 23},
             {27, 0, 13, 16, 46, 5},
             {53, 15, 0, 25, 27, 6},
@@ -10,63 +11,51 @@ public class Main {
             {28, 24, 1, 17, 5, 0}
     };
 
-    // Zmienna przechowująca najkrótszy dotychczas znaleziony czas przestrojenia maszyny
-    static int minimalnyCzas = Integer.MAX_VALUE;
-    static int[] optymalnaKolejnosc = new int[7];
-    static int[] aktualnaKolejnosc = new int[7];
-    static boolean[] odwiedzone = new boolean[6];
+    private static boolean[] odwiedzone = new boolean[6];
+    private static int[] trasa = new int[7];
+    private static int[] optymalnaKolejnosc=new int[7];
+    private static int minCzas = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
-        // Zaczynamy i kończymy produkcję od smaku 1
-        aktualnaKolejnosc[0] = aktualnaKolejnosc[6] = 0;
-        // Sprawdzamy wszystkie możliwe kolejności produkcji smaków
-        for (int i = 1; i < 6; i++) {
-            odwiedzone[i] = true;
-            aktualnaKolejnosc[1] = i;
-            znajdzOptymalnaKolejnosc(i, 2);
-            odwiedzone[i] = false;
-        }
-
-        // Wyświetlanie wyniku
-        System.out.print("Najlepsza kolejność: ");
+        trasa[0] = 0;
+        trasa[6] = 0;
+        szukaj(1);
+        System.out.println("Minimalny czas przestrojenia: " + minCzas);
+        System.out.print("Najlepsza kolejność: 1 ");
         for (int i = 1; i <= 6; i++) {
             System.out.print((optymalnaKolejnosc[i]+1) + " ");
         }
-        System.out.println("\nNajmniejszy czas: " + minimalnyCzas);
     }
 
-    // Funkcja rekurencyjna szukająca optymalnej kolejności produkcji smaków
-    public static void znajdzOptymalnaKolejnosc(int ostatni, int glebokosc) {
-        // Jeśli przeszliśmy przez wszystkie smaki, obliczamy czas przestrojenia dla danej kolejności
-        if (glebokosc == 6) {
-            int calkowityCzas = 0;
+    private static void szukaj(int krok) {
+        if (krok == 6) {
+            int czas = 0;
             for (int i = 0; i < 6; i++) {
-                calkowityCzas += czasy[aktualnaKolejnosc[i]][aktualnaKolejnosc[i+1]];
-//                System.out.println(calkowityCzas);
+                czas += czasy[trasa[i]][trasa[i+1]];
+                System.out.println("Czas elementu po zsumowaniu z elementu["+(i+1)+"]: "+czas);
             }
-            // Jeśli znaleziono krótszy czas, aktualizujemy wynik
-            if (calkowityCzas < minimalnyCzas) {
-                minimalnyCzas = calkowityCzas;
-                System.arraycopy(aktualnaKolejnosc, 0, optymalnaKolejnosc, 0, 7);
+            if (czas < minCzas) {
+                minCzas = czas;
+                System.arraycopy(trasa, 0, optymalnaKolejnosc, 0, 7);
             }
             // Wyświetlanie aktualnie sprawdzanej kolejności
-            System.out.print("Sprawdzana kolejność: 1 ");
+            System.out.print("\nSprawdzana kolejność: 1 ");
             for (int i = 1; i < 6; i++) {
-                System.out.print((aktualnaKolejnosc[i] + 1) + " ");
+                System.out.print((trasa[i] + 1) + " ");
             }
-            System.out.println(", Czas: " + calkowityCzas);
+            System.out.println(", Czas: " + czas+"\n");
             return;
         }
 
-            // Sprawdzanie kolejnych smaków, które jeszcze nie były brane pod uwagę w aktualnej ścieżce
         for (int i = 1; i < 6; i++) {
             if (!odwiedzone[i]) {
-//                System.out.printf(""+i);
+                System.out.printf("Jakie aktualnie elementy są zamienione do liczenia: ["+i+"] ["+(i+1)+"]\n");
+                trasa[krok] = i;
                 odwiedzone[i] = true;
-                aktualnaKolejnosc[glebokosc] = i;
-                znajdzOptymalnaKolejnosc(i, glebokosc+1);
+                szukaj(krok + 1);
                 odwiedzone[i] = false;
             }
         }
     }
 }
+
