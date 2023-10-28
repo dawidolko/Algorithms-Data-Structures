@@ -1,3 +1,14 @@
+# Laboratoria:
+### [Lab 1](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab1)
+### [Lab 2](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab2)
+### [Lab 3](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab3)
+### [Lab 4](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab4)
+### [Lab 5](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab5)
+### [Lab 6](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab6)
+### [Lab 7](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab7/LinkedList)
+### [Lab 8](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab8)
+### [Lab 9](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab9)
+
 ### [A.1](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A1.java) Decyzyjny problem plecakowy
 
 Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowanych od \( 0 \) do \( 5 \). Każdy przedmiot ma określoną wartość i objętość. Należy zapakować plecak spośród przedmiotów ponumerowanych od \( 0 \) do \( 5 \) w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
