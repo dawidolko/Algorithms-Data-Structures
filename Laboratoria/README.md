@@ -336,7 +336,7 @@ i przez ten okres chorzy moga zarazac inne osoby. Oprócz tego osoby, które wyz
 moga juz zachorowac. Jak zmieni sie przebieg epidemii jesli dopuscimy, ze po 2 tygodniach po
 wyzdrowieniu, znowu mozna zachorowac na katar?
 
-### [A.24]([A.6](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A24.java) Problem rozmnazania bakterii
+### [A.24](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A24.java) Problem rozmnazania bakterii
 Rozwazmy proces rozmnazania bakterii. Zakładamy, ze bakterie znajduja sie w srodowisku o
 stałych parametrach, w zwiazku z czym szybkosc i sposób ich rozmnazania jest stały. Wiadomo,
 ze bakterie rozmnazaja sie przez podział, w którego wyniku z jednej bakterii powstaje 2 nowe.
