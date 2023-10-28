@@ -7,10 +7,10 @@ Rozwiąż poniższe problemy informatyczne za pomocą wskazanych metod. Napisz k
 
  ```
    f(n) = 
-   1 dla n = 1 n = 2 
-   2 dla n > 1  n \% 3 = 0 
-   f(n - 2) dla n > 2 \ n \% 3 = 1 
-   2 f(n - 2) & n > 2  n \% 3 = 2
+   1 dla n=1 lub n=2 
+   2*f(n-1) dla n>2  i n%3=0 
+   f(n-2)^2 dla n>2 i n%3=1 
+   2^f(n-2) dla n>2 i n%3=2
 ```
 
    Utwórz projekt, a w nim metodę (funkcję) wykorzystującą **metodę programowania dynamicznego**. Za pomocą wywołania utworzonej metody wyznacz dziesiąty element tego ciągu.
