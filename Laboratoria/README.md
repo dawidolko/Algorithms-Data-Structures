@@ -104,7 +104,7 @@ normie dziennej ilosc siana nie przekroczy 10 kilogramów.
 Odp: Minimalny koszt 91 złotych uzyskamy dla zestawu paszowego: 10 kg siana, 13 kg kiszonki,
 7 kg paszy tresciwej.
 
-### A.10 Problem czterech hetmanów
+### [A.10](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A10.java) Problem czterech hetmanów
 Jak umiescic 4 hetmanów na szachownicy 4x4 tak, aby nie biły sie wzajemnie, tzn. zadnych
 dwóch hetmanów nie było umieszczonych w tym samym wierszu, kolumnie lub na przekatnej
 szachownicy.
@@ -113,7 +113,7 @@ Odp: Oto przykładowy rozkład hetmanów na szachownicy:
 
 <br>![](img/lab1.png)
 
-### A.11 Problem planowania liczebnosci klas
+### [A.11](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A11.java) Problem planowania liczebnosci klas
 Zaplanowac liczbe uczniów w klasach Ia, Ib, Ic, Id przy załozeniu, ze do szkoły przyjeto 68
 dziewczat i 54 chłopców. Maksymalna liczba uczniów w poszczególnych klasach moze wynosic:
 
@@ -136,7 +136,7 @@ Odp: W ponizszej tabeli podany jest przykładowy rozkład uczniów w klasach:
 | 1c | 17 | 17 |
 | 1d | 18 | 18 |
 
-### A.12 Problem wysyłania pociagów
+### [A.12](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A12.java) Problem wysyłania pociagów
 Z miejscowosci wypoczynkowej mozna w koncu sezonu wysłac najwyzej 12 pociagów dziennie.
 Sa to pociagi spalinowe (tzn. z lokomotywami o napedzie spalinowym) albo elektryczne (tzn.
 z lokomotywami o napedzie elektrycznym). Wszystkie miejsca w tych pociagach sa numerowane
@@ -150,7 +150,7 @@ lokomotyw kazdego rodzaju nie jest ograniczona.
 Odp: Liczba przewiezionych pasazerów bedzie najwieksza i wyniesie 5088 osób, jezeli bedziemy
 codziennie wysyłac 6 pociagów spalinowych i 6 pociagów elektrycznych.
 
-### A.13 Problem przydziału maszyn
+### [A.13](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A13.java) Problem przydziału maszyn
 Fabryka produkuje dwa modele: A i B. Kazdy model musi kolejno przejsc przez dwie
 maszyny I i II. Dla wykonania kazdego egzemplarza A maszyna I musi pracowac jedna godzine, a
 maszyna II - 2.5 godziny. Dla wykonania modelu B maszyny I i II musza pracowac odpowiednio
@@ -162,7 +162,7 @@ sprzedazy był mozliwie najwiekszy?
 Odp: Zysk ze sprzedazy bedzie najwiekszy i wyniesie 640 złotych, jezeli fabryka wyprodukuje
 dziennie 4 sztuki modelu A i 1 sztuke modelu B.
 
-### A.14 Problem transportu wegla
+### [A.14](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A14.java) Problem transportu wegla
 Kopalnie A i B dostarczaja wegiel do miast C, D i E. Kopalnia A dostarcza dziennie 500 ton,
 natomiast kopalnia B dostarcza dziennie 800 ton wegla. Miasta C, D i E zuzywaja odpowiednio
 500, 400 i 400 ton wegla dziennie. Koszt transportu, w dziesiatkach złotych, jednej tony wegla
@@ -183,7 +183,7 @@ z kopali A i B przetransportowac do miast C, D i E wegiel w nastepujacych propor
 |  A  |  0  | 100 | 400 |
 |  B  | 500 | 300 |  0  |
 
-### A.15 Problem transportu produktów
+### [A.15](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A15.java) Problem transportu produktów
 Pewne przedsiebiorstwo ma centrale zbytu swojego produktu w miastach Warszawa, Gdansk
 i Wrocław. Centrale te posiadaja odpowiednio 40, 20 i 40 jednostek produktu. Punkty sprzedazy
 zamówiły nastepujace ilosci jednostek: Szczecin 25, Poznan 10, Olsztyn 20, Katowice 30, Rzeszów
@@ -210,7 +210,7 @@ Olsztyn, Katowice i Rzeszów produkty w nastepujacych proporcjach:
 | Wrocław |    5     |   10   |    0    |   25     |    0    |
 | Gdańsk  |   20     |    0   |    0    |    0     |    0    |
 
-### A.16 Problem produkcji samochodów
+### [A.16](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A16.java) Problem produkcji samochodów
 Fabryka samochodów produkuje samochody osobowe i ciezarowe. Fabryka składa sie
 z czterech oddziałów: 1-budowa nadwozi, 2-budowa silników, 3-montaz samochodów osobowych,
 4-montaz samochodów ciezarowych. Miesiecznie zdolnosci produkcyjne tych oddziałów sa
@@ -226,7 +226,7 @@ a ile ciezarowych, aby zysk z produkcji był najwiekszy?
 Odp: Maksymalny zysk 5840000 złotych uzyskamy, jezeli fabryka wyprodukuje co miesiac 1000
 samochodów osobowych i 1200 samochodów ciezarowych.
 
-### A.17 Problem transportu koni
+### [A.17](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A17.java) Problem transportu koni
 Pewna firma jest włascicielem pieciu stadnin koni: A, B, C, D i E. Po inwentaryzacji stwierdzono,
 ze w stadninie A jest o 8, a w stadninie B o 6 koni za duzo. Konie te postanowiono
 rozdzielic miedzy pozostałe gospodarstwa nastepujaco: 5 koni posłac do gospodarstwa C, 5 do
@@ -248,7 +248,7 @@ stadnin A i B przetransportowac do stadnin C, D i E konie w nastepujacych ilosci
 |   A   |   0 |   5 |   3 |
 |   B   |   5 |   0 |   1 |
 
-### A.18 Problem ciecia bel materiałów tekstylnych
+### [A.18](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A18.java) Problem ciecia bel materiałów tekstylnych
 Producent materiałów tekstylnych dostarcza swoje wyroby klientom ciete w belach, przy
 czym posiada on dwie maszyny tnace A i B. Maszyna A moze ciac standardowa bele o szerokosci
 250 cm, a maszyna B moze ciac standardowa bele o szerokosci 200 cm. Bele sa sprzedawane
@@ -262,7 +262,7 @@ otrzymac: 862 bele o szerokosci 112 cm, 341 bel o szerokosci 90 cm, 87 bel o sze
 bel o szerokosci 35 cm. Zakładamy, ze jest dostepne tyle standardowych bel, ile jest konieczne i
 ze wszystkie ciecia wykonywane sa celem uzyskania tylko bel o zamówionych szerokosciach.
 
-### A.19 Problem najkrótszej drogi
+### [A.19](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A19.java) Problem najkrótszej drogi
 Wyznaczyc najkrótsza droge z Warszawy do Sofii, korzystajac z sieci połaczen przedstawionej
 w ponizszej tabeli, gdzie w przypadku istniejacego połaczenia pomiedzy miastami, podane sa
 odległosci (w kilometrach). Natomiast jesli pomiedzy dwoma miastami nie ma bezposredniego
@@ -300,7 +300,7 @@ miesiecy? Liczbe te zwykle oznacza sie przez Fn, jest ona nazywana liczba Fibona
 symulacje majaca na celu stwierdzenie: po ilu miesiacach populacja królików osiagnie:
 100, 1000, 10000, 100000 oraz 1 milion par.
 
-### A.21 Problem przewidywania wzrostu PKB
+### [A.21](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A21.java) Problem przewidywania wzrostu PKB
 W roku 1998 produkt krajowy brutto (w skrócie PKB) Polski wyniósł 6000 dolarów,
 a przyrost PKB utrzymywał sie na poziomie 6 procent w skali roku. Załózmy, ze przyrost PKB
 Polski w nastepnych latach utrzyma sie na takim samym poziomie. Ile lat musi upłynac, aby
@@ -314,7 +314,7 @@ PKB Polski podwoi sie po 12 latach.
 
 PKB Polski dorówna PKB Niemiec po 15 latach.
 
-### A.22 Problem przewidywania oprocentowania od lokaty
+### [A.22](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A22.java) Problem przewidywania oprocentowania od lokaty
 Dysponujesz kwota x złotych. Zaoferowano Ci umieszczenie tej kwoty na lokacie terminowej
 oprocentowanej p procent w skali roku z kapitalizacja odsetek co 6 miesiecy. Jakiej kwoty mozesz
 sie spodziewac na swoim koncie po trzech miesiacach, dziewieciu miesiacach, po roku, po dwóch
@@ -360,7 +360,7 @@ poczatkowej było milion łososi, odpowiedziec na pytanie jak bedzie zmieniac si
 obszarze wymrze. Za moment wymarcia populacji łososi uwazamy sytuacje, kiedy liczebnosc
 łososi spadnie ponizej 100 sztuk.
 
-### A.26 Problem utylizacji odpadów
+### [A.26](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A26.java) Problem utylizacji odpadów
 Zakład utylizacji odpadów posiada pewna liczbe jednolitrowych butelek, które oryginalnie
 zawierały roztwór toksycznego zwiazku chemicznego X o stezeniu 0.5 (50 procent zwiazku X +
 50 procent wody). Butelki sa zgodnie z norma puste, ale w kazdej z pozostaje 1 mililitr roztworu.
@@ -372,7 +372,7 @@ podobnie pewien koszt jest zwiazany z wylaniem roztworu do cysterny (1.5 grosza 
 roztworu). Zadanie polega na znalezieniu optymalnej zawartosci V ze wzgledu na koszty przy
 uwzglednieniu stezenia poczatkowego i wymaganego.
 
-### A.27 Problem przelewania wody
+### [A.27](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A27.java) Problem przelewania wody
 Dane sa dwa naczynia, które moga pomiescic odpowiednio 3 litry i 4 litry wody. Naczynia nie
 maja miarki. Mozna je napełniac przy uzyciu pompy lub przelewajac wode z jednego w drugie.
 W jaki sposób mozna otrzymac dokładnie 2 litry wody w naczyniu czterolitrowym?
@@ -381,13 +381,13 @@ Odp: Niech para (a,b), gdzie: a – ilosc wody w naczyniu 3 litrowym, b – ilos
 4 litrowym, reprezentuje stan ze srodowiska problemu. Oto przykładowa i najkrótsza droga od
 stanu poczatkowego do stanu koncowego: (0,0) (3,0) (0,3) (3,3) (2,4) (2,0) (0,2).
 
-### A.28 Problem wydawania reszty
+### [A.28](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A28.java) Problem wydawania reszty
 Jak wydawac reszte za pomoca mozliwie najmniejszej liczby monet o nominałach 1gr, 2gr,
 5gr, 10gr, 20gr, 50gr, 1zł, 2zł i 5zł. Skonstruuj algorytm, do którego na wejscie podajemy pewna
 sume pieniedzy, czyli reszte, jaka trzeba wydawac; natomiast na wyjsciu wypisywane sa monety
 za pomoca których nalezy te sume wydac.
 
-### A.29 Problem przeprawy przez rzeke misjonarzy i ludozerców
+### [A.29](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A29.java) Problem przeprawy przez rzeke misjonarzy i ludozerców
 Pewnego dnia, trzech misjonarzy i trzech ludozerców znalazło sie na jednym brzegu rzeki
 z zamiarem przeprawy na jej druga strone. Misjonarze nie byli jednak pewni czy przypadkiem
 ludozercy oprócz samej przeprawy przez rzeke nie maja jeszcze innych planów. Wiedzieli
@@ -416,7 +416,7 @@ m l   łódka   m l
 1 1   →       2 2
 0 0   ←       3 3
 
-### A.30 Problem przeprawy przez rzeke wilka, kozy i kapusty
+### [A.30](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A30.java) Problem przeprawy przez rzeke wilka, kozy i kapusty
 W jaki sposób mozna przewiezc przez rzeke wilka, koze i kapuste bez zadnego dla nich
 uszczerbku łódka, która ma tylko dwa miejsca, tzn. jedno miejsce dla przewoznika i drugie
 miejsce dla jednej z przewozonych rzeczy? Wiadomo jednak, ze jesli na jednym brzegu rzeki
@@ -430,7 +430,7 @@ im obiekty ze srodowiska problemu znajduja sie na prawym brzegu rzeki – reprez
 ze srodowiska problemu. Oto przykładowa i najkrótsza droga od stanu poczatkowego do stanu
 koncowego: (0,0,0) (0,1,0) (0,1,1) (0,0,1) (1,0,1) (1,1,1).
 
-### A.31 Problem syntezy zwiazku chemicznego
+### [A.31](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A31.java) Problem syntezy zwiazku chemicznego
 Podczas procesu technologicznego prowadzona jest synteza pewnego zwiazku chemicznego T
 z substratu S. Jednak zwiazek T nie moze byc otrzymywany bezposrednio ze zwiazku S, gdyz
 potrzebne sa pewne posrednie reakcje chemiczne podczas których udział biora takze inne zwiazki
@@ -681,6 +681,8 @@ class SilniaDZ
 Podamy jeszcze jeden przykład problemu, który można rozwiązać metodą „dziel i zwyciężaj”. Dany jest plecak o objętości v oraz n przedmiotów ponumerowanych od 0 do n − 1. Każdy przedmiot ma określoną wartość Wi i objętość Vi. Należy zapakować plecak spośród przedmiotów ponumerowanych od 0 do n − 1 w taki sposób, aby wartość przedmiotów w nim zgromadzonych
 była największa (patrz podrozdział A.1).
 
+### [PlecDec](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/PlecakDec.java)
+
 Oto program, który formalizuje powyższe rozważania:
 ```java
 class PlecakDec
@@ -706,6 +708,8 @@ class PlecakDec
   }
 }
 ```
+
+### [PlecWyp](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/PlecakDecWyp.java)
 
 Podamy teraz analogiczny program, który oprócz wartości plecaka wypisuje również numery przedmiotów zapakowanych do plecaka:
 ```java
@@ -763,3 +767,49 @@ static Plecak P(int i, int v)
 W powyższym programie plecak reprezentowany jest przez obiekt klasy Plecak. Atrybuty obiektów klasy Plecak określone są przez zmienną wartosc, która przechowuje wartość plecaka oraz przez zmienną zawartosc, która przechowuje referencję do tablicy przedmiotów z plecaka. Jeśli i-ty przedmiot znajduje się w plecaku, to w tablicy, w komórce z indeksem i mamy liczbę 1. Jeśli w plecaku i-ty przedmiot się nie znajduje, to w tablicy, w komórce z indeksem i mamy liczbę 0.
 Metoda statyczna P(int i, int v) zwraca plecak o objętości v i maksymalnej wartości, zapakowany spośród przedmiotów ponumerowanych od 0 do i.
 
+Rozwiazanie problemu metoda „programowania dynamicznego”, podobnie jak w metodzie
+„dziel i zwyciezaj”, konstruuje sie na podstawie rozwiazan jego podproblemów. Jednakze w metodzie
+programowania dynamicznego wyniki rozwiazan podproblemów zapamietywane sa w tablicy.
+Pozwala to wyeliminowac problem wielokrotnego rozwiazywania tych samych podproblemów,
+charakterystyczny dla metody „dziel i zwyciezaj”. W metodzie „programowania dynamicznego”
+kazdy podproblem rozwiazuje sie tylko raz.
+
+Konstrukcja programu wykorzystujacego zasade programowania dynamicznego moze zostac
+zrealizowana w nastepujacych etapach:
+
+1. Skonstruowanie rozwiazania problemu metoda dziel i zwyciezaj (wraz z jednoznacznym
+okresleniem przypadków elementarnych).
+
+2. Stworzenie tablicy, w której bedzie mozna zapamietac rozwiazania przypadków elementarnych
+i rozwiazania podproblemów, które zostana obliczone na ich podstawie.
+
+3. Wpisanie do tablicy wartosci numerycznych, odpowiadajacych przypadkom elementarnym.
+
+4. Na podstawie wartosci numerycznych wpisanych do tablicy, uzywajac formuły rekurencyjnej,
+obliczenie rozwiazan problemów wyzszych rzedów i wpisanie ich do tablicy az do
+problemu o zadanym rozmiarze.
+
+Dla przykładu podamy rozwiazanie problemu Fibonacciego, zrealizowane metoda programowania
+dynamicznego:
+
+### [FiboDyn](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/FiboDyn.java)
+
+```java
+class FiboDyn
+{
+   public static void main(String[] args)
+   {
+      final int N = 5; // n-ty wyraz ciagu
+      System.out.println(fibo(N));
+      }
+      static int fibo(int n)
+      {
+         int[] tab = new int[n+1];
+         tab[1] = 1;
+         tab[2] = 1;
+         for (int i = 3; i < tab.length; i++)
+         tab[i] = tab[i-1] + tab[i-2];
+         return tab[tab.length - 1];
+   }
+}
+```
