@@ -54,7 +54,7 @@ liczbe pytan rozmówcy? Przy czym, pytania zadawane rozmówcy musza byc jedynie
 typu: „Czy to jest liczba 546?”, na które rozmówca moze odpowiadac na jeden z nastepujacych
 sposobów: „TAK”, „ZA MAŁA” lub „ZA DUZA”.
 
-### A.7 Problem planowania produkcji mebli
+### [A.7](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A7.java) Problem planowania produkcji mebli
 Wytwórca mebli produkuje stoły, krzesła, biurka i szafy biblioteczne. Do produkcji wykorzystuje
 dwa typy desek. W magazynie wytwórca posiada 1500 m pierwszego typu desek i 1000 m
 drugiego. Dysponuje kapitałem 860 godzin roboczych na wykonanie całej pracy. Przewidywane
@@ -70,7 +70,7 @@ i osiagnał maksymalny zysk.
 Odp: Wytwórca otrzyma maksymalny zysk 11600 złotych, jezeli wyprodukuje 150 stołów, 130
 krzeseł i 30 biurek.
 
-### A.8 Problem planowania diety dziecka
+### [A.8](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A8.java) Problem planowania diety dziecka
 Matka chce, aby jej dzieci otrzymały pewne ilosci czynników odzywczych w porannej
 owsiance. Dzieci moga wybrac płatki owsiane firmy A lub firmy B albo mieszanine tych dwóch.
 Ich sniadanie powinno zawierac co najmniej 1 mg witaminy B1, 5 mg witaminy PP i 400 kalorii.
@@ -83,7 +83,7 @@ a cena produktów była mozliwie najnizsza.
 Odp: Minimalny koszt 116 groszy uzyskamy, jesli przyrzadzimy sniadanie z 5 porcji płatków
 firmy A i 2 porcji płatków firmy B.
 
-### A.9 Problem planowania zawartosci zestawu paszowego
+### [A.9](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A9.java) Problem planowania zawartosci zestawu paszowego
 W zestaw paszowy bydła w okresie zimowym wchodza trzy składniki: siano, kiszonka i pasza
 tresciwa, które zawieraja trzy rodzaje podstawowych składników odzywczych, takich jak: białko,
 wapno i witaminy. Ich zawartosc w kilogramie paszy, ceny (w złotówkach za kilogram) oraz
@@ -111,7 +111,7 @@ szachownicy.
 
 Odp: Oto przykładowy rozkład hetmanów na szachownicy:
 
-
+<br>![](img/lab1.png)
 
 ### A.11 Problem planowania liczebnosci klas
 Zaplanowac liczbe uczniów w klasach Ia, Ib, Ic, Id przy załozeniu, ze do szkoły przyjeto 68
@@ -283,7 +283,7 @@ połaczenia - zamiast odległosci umieszczono słowo: brak.
 Odp: Najkrótsza droga z Warszawy do Sofii ma długosc 1506 km i prowadzi przez Zakopane oraz
 Budapeszt.
 
-### A.20 Problem przewidywania liczebnosci populacji królików
+### [A.20](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A20.java) Problem przewidywania liczebnosci populacji królików
 Wroku 1202 Leonardo Fibonacci sformułował nastepujacy, obecnie bardzo popularny w informatyce
 problem, dotyczacy rozmnazania sie królików. Na poczatku mamy pare nowonarodzonych
 królików i o kazdej parze królików zakładamy, ze:
@@ -326,7 +326,7 @@ Jesli x oznacza wkład poczatkowy a p oprocentowanie w skali roku na lokacie ter
 z kapitalizacja odsetek co 6 miesiecy, to po pół roku na koncie bedzie kwota x1 = x + 0.5*p*x
 a po roku kwota x2 = x1 + 0.5*p*x1.
 
-### A.23 Problem przewidywania przebiegu epidemii
+### [A.23](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A23.java) Problem przewidywania przebiegu epidemii
 W pewnej zamknietej społecznosci liczacej 100000 osób pojawiło sie 10 osób chorych na
 katar, co spowodowało „epidemie kataru”. Wiedzac, ze sposród 10 osób chorych na katar kazda
 zaraza codziennie jeszcze dwie osoby, podac przewidywany przebieg epidemii. W szczególnosci
@@ -336,7 +336,7 @@ i przez ten okres chorzy moga zarazac inne osoby. Oprócz tego osoby, które wyz
 moga juz zachorowac. Jak zmieni sie przebieg epidemii jesli dopuscimy, ze po 2 tygodniach po
 wyzdrowieniu, znowu mozna zachorowac na katar?
 
-### A.24 Problem rozmnazania bakterii
+### [A.24]([A.6](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A24.java) Problem rozmnazania bakterii
 Rozwazmy proces rozmnazania bakterii. Zakładamy, ze bakterie znajduja sie w srodowisku o
 stałych parametrach, w zwiazku z czym szybkosc i sposób ich rozmnazania jest stały. Wiadomo,
 ze bakterie rozmnazaja sie przez podział, w którego wyniku z jednej bakterii powstaje 2 nowe.
@@ -344,7 +344,7 @@ Podział ten nastepuje co 2 minuty. Przyjac, ze wszystkie bakterie dziela sie w 
 chwilach. Po jakim czasie liczba bakterii zwiekszy sie 1000 razy, 10000 razy, 100000 razy oraz 1
 mln razy.
 
-### A.25 Problem łososi i rekinów
+### [A.25](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A25.java) Problem łososi i rekinów
 Pewna rodzina łososi rozwija sie zgodnie z prawem Malthusa, co mozna wyrazic w ten sposób,
 ze jesli wielkosc populacji w chwili t wynosi p(t), to w wyniku naturalnego rozrodu populacji
 w chwili t + 1 jej wielkosc wynosi:
