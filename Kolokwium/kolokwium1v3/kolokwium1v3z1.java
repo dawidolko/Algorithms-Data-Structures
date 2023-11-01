@@ -1,5 +1,5 @@
-// kolokwium1v3z1
-public class kolokwium1v3z1 {
+
+public class zad1_5 {
 
     // Metoda wykorzystująca programowanie dynamiczne do obliczenia n-tego wyrazu ciągu
     public static int wyrazCiągu(int n) {
@@ -14,10 +14,9 @@ public class kolokwium1v3z1 {
             } else if (i % 3 == 1) {
                 f[i] = f[i-2] * f[i-2];
             } else if (i%3==2){
-                f[i] = 2^(f[i-3]);
+                f[i] = (int) Math.pow(2, f[i-2]); // Używamy Math.pow() do obliczenia potęgi
             }
         }
-
 
         return f[n];
     }
