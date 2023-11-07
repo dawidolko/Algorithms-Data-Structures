@@ -2,33 +2,47 @@ package Programowanie_dynamiczne;
 
 public class A25_Lososie_rekiny {
     public static void main(String[] args) {
-        int lososie = 1000000;
-        int[] tab = new int[7361];
-        boolean dwa=false, trzy=false, dziesiec=false, sto=false;
+        int lososie = 1000000; // początkowa liczba łososi
+        int[] tab = new int[7361]; // tablica do przechowywania liczby łososi na każdą minutę symulacji
+        // Flagi do zaznaczania, czy określone progi liczby łososi zostały osiągnięte
+        boolean dwa = false, // flaga dla połowy populacji
+                trzy = false, // flaga dla jednej trzeciej populacji
+                dziesiec = false, // flaga dla jednej dziesiątej populacji
+                sto = false; // flaga dla jednej setnej populacji
 
-        for(int i=0;i<tab.length;i++) {
-            if (i==0) tab[i]=1000000;
-            else tab[i] = (int)(((tab[i-1]*Math.exp(0.003)*0.998)*0.998));
+        // Pętla symulująca zmianę liczby łososi w czasie
+        for (int i = 0; i < tab.length; i++) {
+            // Ustawienie wartości początkowej populacji łososi
+            if (i == 0) tab[i] = lososie;
+            else {
+                // Obliczenie nowej liczby łososi z uwzględnieniem wzrostu naturalnego i strat przez rekinów
+                tab[i] = (int) ((tab[i - 1] * Math.exp(0.003) * 0.998) * 0.998);
+            }
 
-            if (!dwa && tab[i]<lososie/2) {
+            // Sprawdzenie, czy liczba łososi spadła poniżej połowy początkowej wartości
+            if (!dwa && tab[i] < lososie / 2) {
                 System.out.println("Polowa: po " + i + " minutach");
-                dwa = true;
+                dwa = true; // aktualizacja flagi
             }
-            if (!trzy && tab[i]<lososie/3) {
+            // Sprawdzenie, czy liczba łososi spadła poniżej jednej trzeciej początkowej wartości
+            if (!trzy && tab[i] < lososie / 3) {
                 System.out.println("Jedna trzecia: po " + i + " minutach");
-                trzy = true;
+                trzy = true; // aktualizacja flagi
             }
-            if (!dziesiec && tab[i]<lososie/10) {
+            // Sprawdzenie, czy liczba łososi spadła poniżej jednej dziesiątej początkowej wartości
+            if (!dziesiec && tab[i] < lososie / 10) {
                 System.out.println("Jedna dziesiata: po " + i + " minutach");
-                dziesiec = true;
+                dziesiec = true; // aktualizacja flagi
             }
-            if (!sto && tab[i]<lososie/100) {
+            // Sprawdzenie, czy liczba łososi spadła poniżej jednej setnej początkowej wartości
+            if (!sto && tab[i] < lososie / 100) {
                 System.out.println("Jedna setna: po " + i + " minutach");
-                sto = true;
+                sto = true; // aktualizacja flagi
             }
-            if (tab[i]<100) {
+            // Jeżeli liczba łososi spadnie poniżej 100, zakończ symulację
+            if (tab[i] < 100) {
                 System.out.println("Wymrze: po " + i + " minutach");
-                break;
+                break; // wyjście z pętli
             }
         }
     }
