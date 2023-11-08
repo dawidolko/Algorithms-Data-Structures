@@ -43,7 +43,7 @@ You are free to use any of the codes in your projects, whether they are for educ
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/dawidolko/Algorithms-Data-Structures/blob/cde4e1a8f535c9f0f7e55482e4d19d1539188125/LICENSE) file for details.
 
 ## Acknowledgments
 
