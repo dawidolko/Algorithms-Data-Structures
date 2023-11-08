@@ -825,41 +825,6 @@ class FiboDyn
 }
 ```
 
-Algorytmy zachłanne
-Idee lezace u podstaw opisanej w poprzednim podrozdziale metody wspinaczkowej czesto
-w literaturze formułuje sie bardziej ogólnie w postaci tzw. algorytmów zachłannych (ang. greedy
-algorithm). Algorytmy zachłanne cechuja sie tym, ze zawsze wykonuja takie działania, które
-w danej chwili wydaja sie najkorzystniejsze. Okazuje sie, ze podczas swej codziennej działalnosci,
-ludzie czesto postepuja podobnie. Objawia sie to tym, ze rozwiazujac jakies zadanie zadawalamy
-sie jego szybkim i w miare poprawnym rozwiazaniem, choc niekoniecznie optymalnym.
-Algorytmy zachłanne nie zawsze prowadza bowiem do optymalnych rozwiazan, choc dla wielu
-problemów rozwiazania jakie dostarczaja algorytmy zachłanne sa zupełnie wystarczajace. Tak
-wiec, algorytmy zachłanne stosujemy wtedy, gdy na podstawie pewnych danych wejsciowych,
-nalezy szybko skonstruowac rozwiazanie danego problemu. Bowiem algorytm zachłanny zawsze
-stara sie jak najszybciej skonstruowac rozwiazanie problemu, uzywajac tych fragmentów danych
-wejsciowych, które na danym etapie konstrukcji rozwiazania wydaja sie najbardziej uzyteczne,
-tzn. w danym momencie najbardziej przyblizaja do skonstruowania ostatecznego rozwiazania.
-Schemat działania algorytmu zachłannego przedstawia nastepujaca procedura.
-procedura algorytmZachłanny(W: zbiór danych wejsciowych)
-1. R := zbiór pusty;
-2. Dopóki czyZnaleziono(rozwiazanie) = fałsz i W jest niepuste wykonuj:
-a) x := wybór(W),
-b) R := suma(R,{x}),
-c) W := róznica(W,{x}),
-3. Jesli czyRozwiazanie(R) = prawda, to:
-zwróc R,
-w przeciwnym razie:
-wypisz "Brak rozwiazan".
-Przy czym:
-R – wybrany podczas działania algorytmu podzbiór zbioru danych wejsciowych, na podstawie
-którego ma byc konstruowane rozwiazanie,
-x – pojedynczy element zbioru W,
-wybór(W) – procedura dokonujaca optymalnego na danym etapie obliczen, wyboru elementu
-ze zbioru W do konstrukcji rozwiazania problemu,
-suma(R,{x}) – procedura dołaczajaca element x do zbioru R,
-róznica(W,{x}) – procedura usuwajaca element x ze zbioru W,
-czyRozwiazanie(R) – procedura sprawdzajaca, czy na podstawie zbioru R mozna juz skonstruowac
-kompletne rozwiazanie problemu.
 Klasycznym przypadkiem problemu, który mozna rozwiazac za pomoca powyzszego podejscia
 jest problem wydawania reszty (patrz podrozdział A.28). Aby rozwiazac ten problem wystarczy
 zauwazyc, ze aby szybko wydac ustalona kwote pieniedzy (tzn. minimalna liczba monet), trzeba
@@ -876,7 +841,7 @@ w przeciwnym razie:
 wybierz monete M o mniejszym nominale.
 ```
 Oto program, który realizuje powyzszy algorytm:
-[ResztaZachlanny](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/ResztaZachlanny.java)
+### [ResztaZachlanny](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/ResztaZachlanny.java)
 
 Metody aproksymacyjne
 
