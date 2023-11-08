@@ -22,46 +22,43 @@ public class Main {
 
         //Problem wydawania reszty
 
-        Scanner input = new Scanner(System.in);
-        Random rand1 = new Random();
-        final int attempts = 50;
-        final int moneyLimit = 11;
-        final int[] nominals = {500, 200, 100, 50, 20, 10, 5, 2, 1};
-        int bestNumberOfMoney = Integer.MAX_VALUE;
-        String result = "";
+       import java.io.*;
 
-        System.out.print("Wprowadz reszte: ");
-        int rest = (int)(input.nextDouble()*100);
-        System.out.println("Wprowadzona reszta: " + rest);
+        InputStreamReader str = new InputStreamReader(System.in);
+        BufferedReader wejscie = new BufferedReader(str);
+        String tekst;
+        final int[] M = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+        int zl, gr, r, ilosc, i;
+        System.out.println("Podaj resztę..");
+        System.out.print("złotych: ");
+        tekst = wejscie.readLine();
+        zl = Integer.parseInt(tekst);
+        System.out.print("groszy: ");
+        tekst = wejscie.readLine();
+        gr = Integer.parseInt(tekst);
+        r = zl * 100 + gr;
 
-        for (int i=0;i<attempts;i++) {
-            int r = rest;
-            String localResult = "";
-            int localNumberOfMoney = 0;
+        String header = "Nominał (zł) | Ilość";
+        System.out.println(header);
+        System.out.println(new String(new char[header.length()]).replace("\0", "-"));
 
-            while (r>0) {
-                int nominal = nominals[rand1.nextInt(nominals.length)];
-                if (localNumberOfMoney==moneyLimit) break;
-                else {
-                    if (r - nominal >= 0) {
-                        localResult += nominal/100f + " ";
-                        r -= nominal;
-                        localNumberOfMoney++;
-                    }
-                }
+        for (i = 0; i < M.length; i++) {
+            ilosc = 0;
+            while (r >= M[i]) {
+                r -= M[i];
+                ilosc++;
             }
-
-            if (r==0 && localNumberOfMoney<bestNumberOfMoney) {
-                bestNumberOfMoney=localNumberOfMoney;
-                result = localResult;
+            if (ilosc > 0) { // jeśli jakaś moneta jest używana
+                System.out.printf("%10.2f zł | %5d\n", M[i] / 100.0, ilosc);
             }
         }
 
-        if (bestNumberOfMoney<Integer.MAX_VALUE) {
-            System.out.println("Wydana reszta: ");
-            System.out.println(result);
+        if (r > 0) { // Jeśli pozostały jeszcze jakieś grosze
+            System.out.printf("Pozostało niewydanych groszy: %d\n", r);
         } else {
-            System.out.println("Nie udalo sie wydac tej reszty.");
+            System.out.println("Nie pozostało niewydanych groszy.");
         }
+    }
+}
     }
 }
