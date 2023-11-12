@@ -1,24 +1,28 @@
 public class kolokwium1v2z1 {
-        public static void main(String[] args) {
-            double poczatkowaIlosc = 12.0;
-            double czas = obliczCzas(poczatkowaIlosc);
-            System.out.println("Aby liczba bakterii była większa niż 1000-krotność początkowej liczby, musi minąć: " + czas + " minut.");
-        }
 
-        public static double obliczCzas(double poczatkowaIlosc) {
-            double czas = 0;
-            double obecnaIlosc = poczatkowaIlosc;
-            double docelowaIlosc = poczatkowaIlosc * 1000;
-
-            while (obecnaIlosc < docelowaIlosc) {
-                if (czas % 10 == 0 && czas != 0) {
-                    obecnaIlosc = obecnaIlosc * 0.5; // co 10 minut umiera 50% bakterii
-                }
-                obecnaIlosc *= 2; // podział bakterii co 2 minuty
-                czas += 2;
-            }
-
-            return czas;
-        }
+    public static void main(String[] args) {
+        double initialBacteria = 12; // Początkowa liczba bakterii
+        double targetMultiplier = 1000; // Docelowe zwiększenie liczby bakterii
+        int minutesNeeded = calculateTimeToIncrease(initialBacteria, targetMultiplier);
+        System.out.println("Liczba bakterii zwiększy się 1000 razy po " + minutesNeeded + " minutach.");
     }
 
+    private static int calculateTimeToIncrease(double initialBacteria, double targetMultiplier) {
+        double currentBacteria = initialBacteria;
+        int minutesPassed = 0; // Licznik czasu
+
+        // Obliczanie, kiedy liczba bakterii zwiększy się 1000 razy
+        while (currentBacteria < initialBacteria * targetMultiplier) {
+            // Podział bakterii co 2 minuty
+            currentBacteria *= Math.pow(2, 5); // Bakterie podwajają się 5 razy w ciągu 10 minut
+
+            // Śmierć bakterii co 10 minut (50% populacji)
+            currentBacteria /= 2; // Połowa umiera
+
+            // Zwiększenie licznika czasu o 10 minut po każdym cyklu
+            minutesPassed += 10;
+        }
+
+        return minutesPassed;
+    }
+}
