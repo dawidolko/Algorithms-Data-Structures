@@ -2,108 +2,141 @@ package Algorytm_zachlanny;
 
 public class A1_Decyzyjny_problem_plecakowy {
 
+    // Stałe przechowujące objętości i wartości przedmiotów oraz maksymalną pojemność plecaka
     final static int[] objetosci = {6, 2, 3, 2, 3, 1};
     final static int[] wartosci = {6, 4, 5, 7, 10, 2};
-    final static int MAX = 10;
-    final static int przedmioty = objetosci.length;
+    final static int MAX = 10; // Maksymalna objętość plecaka
+    final static int przedmioty = objetosci.length; // Liczba dostępnych przedmiotów
 
     public static void main(String[] args) {
+        // Wywołanie trzech różnych strategii rozwiązywania problemu plecakowego
         poObjetosci();
         poWartosci();
         poWspolczynniku();
     }
 
     public static void poObjetosci() {
+        boolean[] tab = new boolean[przedmioty]; // Tablica śledząca, które przedmioty zostały wybrane
 
-        boolean[] tab = new boolean[przedmioty];
-        for (boolean e : tab) e = false;
+        int objetosc = 0; // Aktualna objętość plecaka
+        int wartosc = 0;  // Aktualna wartość przedmiotów w plecaku
 
-        int objetosc = 0;
-        int wartosc = 0;
-
+        // Pętla działa, dopóki znajdują się przedmioty, które można dodać do plecaka
         while (true) {
             int najmniejszaObjetosc = Integer.MAX_VALUE;
-            int pozycja = -1;
+            int pozycja = -1; // Pozycja wybranego przedmiotu
 
-            for (int i=0;i<przedmioty;i++) {
-                if (!tab[i] && objetosc+objetosci[i]<=MAX && objetosci[i]<najmniejszaObjetosc) {
+            // Pętla szukająca przedmiotu o najmniejszej objętości, który można dodać do plecaka
+            for (int i = 0; i < przedmioty; i++) {
+                if (!tab[i] && objetosc + objetosci[i] <= MAX && objetosci[i] < najmniejszaObjetosc) {
+//                    System.out.println(!tab[i]+" i "+ objetosc+"+"+objetosci[i]+"<="+MAX+" i "+objetosci[i]+"<"+najmniejszaObjetosc);
                     najmniejszaObjetosc = objetosci[i];
                     pozycja = i;
                 }
             }
 
-            if (pozycja>-1) {
-                tab[pozycja] = true;
-                wartosc += wartosci[pozycja];
-                objetosc += objetosci[pozycja];
-            } else break;
+            // Dodanie przedmiotu do plecaka, jeśli znaleziono odpowiedni przedmiot
+            if (pozycja > -1) {
+                tab[pozycja] = true; // Oznaczenie przedmiotu jako wybranego
+                wartosc += wartosci[pozycja]; // Dodanie wartości przedmiotu do łącznej wartości
+                objetosc += objetosci[pozycja]; // Dodanie objętości przedmiotu do łącznej objętości
+            } else {
+                break; // Zakończenie pętli, jeśli nie można dodać więcej przedmiotów
+            }
         }
 
+        // Wyświetlenie wyników
         System.out.print("Przedmioty: ");
-        for (int i=0;i<przedmioty;i++) if (tab[i]) System.out.print(i + " ");
-        System.out.println("\tWartosc: " + wartosc);
+        for (int i = 0; i < przedmioty; i++) {
+            if (tab[i]) {
+                System.out.print(i + " "); // Wyświetlanie indeksów wybranych przedmiotów
+            }
+        }
+        System.out.println("\tWartosc: " + wartosc); // Wyświetlenie łącznej wartości przedmiotów w plecaku
     }
 
     public static void poWartosci() {
-        boolean[] tab = new boolean[przedmioty];
-        for (boolean e : tab) e = false;
+        boolean[] tab = new boolean[przedmioty]; // Tablica śledząca, które przedmioty zostały wybrane
 
-        int objectosc = 0;
-        int wartosc = 0;
+        int objetosc = 0; // Aktualna objętość plecaka
+        int wartosc = 0;  // Aktualna wartość przedmiotów w plecaku
 
+        // Pętla działa, dopóki znajdują się przedmioty, które można dodać do plecaka
         while (true) {
-            int pozycja=-1;
-            int maksymalnaWartosc = Integer.MIN_VALUE;
+            int pozycja = -1; // Pozycja wybranego przedmiotu
+            int maksymalnaWartosc = Integer.MIN_VALUE; // Największa znaleziona wartość przedmiotu
 
-            for (int i=0;i<przedmioty;i++) {
-                if (!tab[i] && wartosci[i]>maksymalnaWartosc && objetosci[i]+objectosc<=MAX) {
+            // Pętla szukająca przedmiotu o największej wartości, który można dodać do plecaka
+            for (int i = 0; i < przedmioty; i++) {
+                if (!tab[i] && wartosci[i] > maksymalnaWartosc && objetosc + objetosci[i] <= MAX) {
+//                    System.out.println(!tab[i]+" i "+wartosci[i]+">"+maksymalnaWartosc+" i "+objetosci[i]+"<="+MAX);
                     maksymalnaWartosc = wartosci[i];
                     pozycja = i;
                 }
             }
 
-            if (pozycja>-1) {
-                tab[pozycja] = true;
-                wartosc += wartosci[pozycja];
-                objectosc += objetosci[pozycja];
-            } else break;
+            // Dodanie przedmiotu do plecaka, jeśli znaleziono odpowiedni przedmiot
+            if (pozycja > -1) {
+                tab[pozycja] = true; // Oznaczenie przedmiotu jako wybranego
+                wartosc += wartosci[pozycja]; // Dodanie wartości przedmiotu do łącznej wartości
+                objetosc += objetosci[pozycja]; // Dodanie objętości przedmiotu do łącznej objętości
+            } else {
+                break; // Zakończenie pętli, jeśli nie można dodać więcej przedmiotów
+            }
         }
 
+        // Wyświetlenie wyników
         System.out.print("Przedmioty: ");
-        for (int i=0;i<przedmioty;i++) if (tab[i]) System.out.print(i + " ");
-        System.out.println("\tWartosc: " + wartosc);
+        for (int i = 0; i < przedmioty; i++) {
+            if (tab[i]) {
+                System.out.print(i + " "); // Wyświetlanie indeksów wybranych przedmiotów
+            }
+        }
+        System.out.println("\tWartosc: " + wartosc); // Wyświetlenie łącznej wartości przedmiotów w plecaku
     }
 
     public static void poWspolczynniku() {
-        boolean[] tab = new boolean[przedmioty];
-        for (boolean e : tab) e = false;
+        boolean[] tab = new boolean[przedmioty]; // Tablica śledząca, które przedmioty zostały wybrane
 
         double[] wspolczynniki = new double[przedmioty];
-        for (int i=0;i<przedmioty;i++) wspolczynniki[i] = wartosci[i]/objetosci[i];
+        for (int i = 0; i < przedmioty; i++) {
+            wspolczynniki[i] = (double) wartosci[i] / objetosci[i]; // Obliczanie współczynnika wartości do objętości dla każdego przedmiotu
+        }
 
-        int wartosc=0;
-        int objetosc=0;
+        int objetosc = 0; // Aktualna objętość plecaka
+        int wartosc = 0;  // Aktualna wartość przedmiotów w plecaku
 
-        while(true) {
-            int pozycja = -1;
-            double najWspolczynnik = Double.MIN_VALUE;
+        // Pętla działa, dopóki znajdują się przedmioty, które można dodać do plecaka
+        while (true) {
+            int pozycja = -1; // Pozycja wybranego przedmiotu
+            double najWspolczynnik = Double.MIN_VALUE; // Największy znaleziony współczynnik
 
-            for (int i=0;i<przedmioty;i++) {
-                if (!tab[i] && najWspolczynnik<wspolczynniki[i] && objetosc+objetosci[i]<=MAX) {
+            // Pętla szukająca przedmiotu z największym współczynnikiem, który można dodać do plecaka
+            for (int i = 0; i < przedmioty; i++) {
+                if (!tab[i] && wspolczynniki[i] > najWspolczynnik && objetosc + objetosci[i] <= MAX) {
+                    System.out.println(!tab[i] +" i "+ wspolczynniki[i] +" > "+ najWspolczynnik +" i "+ objetosc +" + "+ objetosci[i] +" <= "+ MAX);
+                    najWspolczynnik = wspolczynniki[i];
                     pozycja = i;
-                    najWspolczynnik=wspolczynniki[i];
                 }
             }
 
-            if (pozycja>-1) {
-                wartosc += wartosci[pozycja];
-                objetosc += objetosci[pozycja];
-                tab[pozycja] = true;
-            } else break;
+            // Dodanie przedmiotu do plecaka, jeśli znaleziono odpowiedni przedmiot
+            if (pozycja > -1) {
+                tab[pozycja] = true; // Oznaczenie przedmiotu jako wybranego
+                wartosc += wartosci[pozycja]; // Dodanie wartości przedmiotu do łącznej wartości
+                objetosc += objetosci[pozycja]; // Dodanie objętości przedmiotu do łącznej objętości
+            } else {
+                break; // Zakończenie pętli, jeśli nie można dodać więcej przedmiotów
+            }
         }
 
+        // Wyświetlenie wyników
         System.out.print("Przedmioty: ");
-        for (int i=0;i<przedmioty;i++) if (tab[i]) System.out.print(i+" ");
-        System.out.println("\tWartosci: " + wartosc);
+        for (int i = 0; i < przedmioty; i++) {
+            if (tab[i]) {
+                System.out.print(i + " "); // Wyświetlanie indeksów wybranych przedmiotów
+            }
+        }
+        System.out.println("\tWartosc: " + wartosc); // Wyświetlenie łącznej wartości przedmiotów w plecaku
     }
 }
