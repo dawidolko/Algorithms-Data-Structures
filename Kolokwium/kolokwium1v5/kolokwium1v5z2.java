@@ -1,68 +1,64 @@
 public class kolokwium1v5z2 {
-
-        // Reprezentacja macierzy odległości między miastami
-        private static final int BRAK = Integer.MAX_VALUE; // oznaczenie braku połączenia
-        private static final int[][] odleglosci = {
-                {0, 300, 402, 356, 474, BRAK, BRAK, BRAK, BRAK},
-                {300, 0, BRAK, 440, 474, BRAK, BRAK, 823, BRAK},
-                {402, BRAK, 0, 330, 823, BRAK, BRAK, BRAK, BRAK},
-                {356, 440, 330, 0, 813, 336, BRAK, BRAK, 774},
-                {474, 474, 823, 813, 0, 430, BRAK, BRAK, 68},
-                {BRAK, BRAK, BRAK, 336, 430, 0, 775, 403, 768},
-                {BRAK, BRAK, BRAK, BRAK, BRAK, 775, 0, BRAK, 0},
-                {BRAK, 823, BRAK, BRAK, BRAK, 403, BRAK, 0, 768},
-                {BRAK, BRAK, BRAK, 774, 68, 768, 0, 768, 0}
+    public static void main(String[] args) {
+        final int[][] polaczenia = {
+                {0, 300, 402, 356, -1, -1, -1, -1, -1},
+                {300, 0, -1, -1, 440, 474, -1, -1, -1},
+                {402, -1, 0, -1, -1, 330, -1, -1, -1},
+                {356, -1, -1, 0, -1, -1, 823, -1, -1},
+                {-1, 440, -1, -1, 0, -1, -1, 430, -1},
+                {-1, 474, 330, -1, -1, 0, 813, 365, 774},
+                {-1, -1, -1, 823, -1, 813, 0, -1, 403},
+                {-1, -1, -1, -1, 430, 365, -1, 0, 768},
+                {-1, -1, -1, -1, -1, 774, 403, 768, 0}
         };
+        final String[] nazwy = {"Warszawa", "Katowice", "Zakopane", "Lwow", "Wieden", "Budapeszt", "Bukareszt", "Zagrzeb", "Sofia"};
 
-        public int wyznaczDroge() {
-            boolean[] odwiedzone = new boolean[odleglosci.length];
-            int obecneMiasto = wybierzPoczatkoweMiasto();
-            odwiedzone[obecneMiasto] = true;
+        //Interpretuje jako przebycie po miastach. Wybieramy pierwszy z najwieksza liczba polaczen potem po najkrotszych polaczeniach wybieramy miasta
 
-            int calkowitaOdleglosc = 0;
+        int wiersz=-1;
+        int maxPolaczen = Integer.MIN_VALUE;
+        for (int i=0;i<polaczenia.length;i++) {
+            int polaczen = 0;
 
-            for (int i = 1; i < odleglosci.length; i++) {
-                int najkrotszaDroga = BRAK;
-                int nastepneMiasto = -1;
+            for (int j=0;j<polaczenia.length;j++) {
+                if (polaczenia[i][j]>0) polaczen++;
+            }
 
-                for (int j = 0; j < odleglosci.length; j++) {
-                    if (!odwiedzone[j] && odleglosci[obecneMiasto][j] != BRAK && odleglosci[obecneMiasto][j] < najkrotszaDroga) {
-                        najkrotszaDroga = odleglosci[obecneMiasto][j];
-                        nastepneMiasto = j;
+            if (polaczen>maxPolaczen) {
+                maxPolaczen=polaczen;
+                wiersz = i;
+            }
+        }
+        System.out.println("Trasa: ");
+        System.out.print(nazwy[wiersz] + " ");
+
+        boolean[] odwiedzone = new boolean[polaczenia.length];
+        odwiedzone[wiersz] = true;
+
+        int i = 0;
+        int suma = 0;
+        while (true) {
+            if (i<polaczenia.length) {
+                int minTrasa = Integer.MAX_VALUE;
+                int pozycja = -1;
+
+                for (int j=0;j<polaczenia[wiersz].length;j++) {
+                    if (polaczenia[wiersz][j]<minTrasa && polaczenia[wiersz][j]>0 && !odwiedzone[j]) {
+                        pozycja = j;
+                        minTrasa = polaczenia[wiersz][j];
                     }
                 }
 
-                if (nastepneMiasto != -1) {
-                    calkowitaOdleglosc += najkrotszaDroga;
-                    odwiedzone[nastepneMiasto] = true;
-                    obecneMiasto = nastepneMiasto;
-                }
+                if (pozycja>-1) {
+                    System.out.print(nazwy[pozycja] + " ");
+                    suma += polaczenia[wiersz][pozycja];
+                    wiersz=pozycja;
+                    odwiedzone[pozycja] = true;
+                    i++;
+                } else break;
             }
-            return calkowitaOdleglosc;
         }
 
-        private int wybierzPoczatkoweMiasto() {
-            int maxPolaczen = -1;
-            int miasto = -1;
-
-            for (int i = 0; i < odleglosci.length; i++) {
-                int polaczenia = 0;
-                for (int j = 0; j < odleglosci[i].length; j++) {
-                    if (odleglosci[i][j] != BRAK) {
-                        polaczenia++;
-                    }
-                }
-
-                if (polaczenia > maxPolaczen) {
-                    maxPolaczen = polaczenia;
-                    miasto = i;
-                }
-            }
-            return miasto;
-        }
-
-        public static void main(String[] args) {
-            kolokwium1v5z2 droga = new kolokwium1v5z2();
-            System.out.println("Całkowita długość trasy: " + droga.wyznaczDroge() + " km");
-        }
+        System.out.println("\nTa trasa ma " + suma + " km");
     }
+}
