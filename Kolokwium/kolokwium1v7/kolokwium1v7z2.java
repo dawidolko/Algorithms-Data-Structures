@@ -12,8 +12,8 @@ public class kolokwium1v7z2 {
         int trafienia = 0;
 
         for (int i = 0; i < liczbaProb; i++) {
-            double x = rand.nextDouble();
-            double y = rand.nextDouble();
+            double x = (double) rand.nextInt(100+1)/100;
+            double y = (double) rand.nextInt(100+1)/100;
             if (y <= Math.sqrt(x)) {
                 trafienia++;
             }
