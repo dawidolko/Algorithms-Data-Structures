@@ -1,8 +1,8 @@
 public class kolokwium1v4z2 {
 
         // Nominały monet
-        private static final int[] NOMINALY = {500, 200, 100, 50, 20, 10, 5, 2, 1};  // w groszach
-        private static final int[] ILOSCI = {5, 3, 4, 1, 0, 7, 1, 3, 5};  // dostępne ilości monet
+        private static final int[] NOMINALY = {1, 2, 5, 10, 20, 50, 100, 200, 500};  // w groszach
+        private static final int[] ILOSCI = {5, 3, 4, 1, 0, 7, 0, 1, 3};  // dostępne ilości monet
 
         public static void wydajReszte(double kwota) {
             int reszta = (int) (kwota * 100);  // przeliczenie na grosze
