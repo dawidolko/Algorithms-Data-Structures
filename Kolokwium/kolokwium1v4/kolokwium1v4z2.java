@@ -1,33 +1,32 @@
 public class kolokwium1v4z2 {
 
-        // Nominały monet
-        private static final int[] NOMINALY = {1, 2, 5, 10, 20, 50, 100, 200, 500};  // w groszach
-        private static final int[] ILOSCI = {5, 3, 4, 1, 0, 7, 0, 1, 3};  // dostępne ilości monet
+    private static final int[] NOMINALY = {1, 2, 5, 10, 20, 50, 100, 200, 500};
+    private static final int[] LICZBA_DOSTEPNYCH_MONET = {5, 3, 4, 1, 0, 7, 0, 1, 3};
 
-        public static void wydajReszte(double kwota) {
-            int reszta = (int) (kwota * 100);  // przeliczenie na grosze
-            int[] wydaneMonety = new int[NOMINALY.length];
+    public static void wydajReszte(double kwota) {
+        int pozostalaKwota = (int) (kwota * 100);  // przeliczamy na grosze
 
-            for (int i = 0; i < NOMINALY.length; i++) {
-                while (reszta >= NOMINALY[i] && ILOSCI[i] > 0) {
-                    reszta -= NOMINALY[i];
-                    wydaneMonety[i]++;
-                    ILOSCI[i]--;
-                }
+        for (int i = NOMINALY.length - 1; i >= 0; i--) {
+            int liczbaMonetDoWydania = 0; // Liczba monet do wydania danego nominału
+            while (pozostalaKwota >= NOMINALY[i] && LICZBA_DOSTEPNYCH_MONET[i] > 0) {
+                pozostalaKwota -= NOMINALY[i]; // Zmniejszamy pozostałą kwotę o nominał
+                LICZBA_DOSTEPNYCH_MONET[i]--; // Zmniejszamy liczbę dostępnych monet o 1
+                liczbaMonetDoWydania++; // Zwiększamy liczbę monet do wydania
             }
 
-            if (reszta > 0) {
-                System.out.println("Nie można wydać dokładnej reszty.");
-            } else {
-                for (int i = 0; i < NOMINALY.length; i++) {
-                    if (wydaneMonety[i] > 0) {
-                        System.out.println("Nominał " + (double) NOMINALY[i] / 100 + "zł: " + wydaneMonety[i] + " szt.");
-                    }
-                }
+            if (liczbaMonetDoWydania > 0) {
+                System.out.println("Nominał: " + NOMINALY[i] + "gr, Liczba monet: " + liczbaMonetDoWydania);
             }
         }
 
-        public static void main(String[] args) {
-            wydajReszte(9.28);
+        if (pozostalaKwota > 0) {
+            System.out.println("Nie można wydać dokładnej reszty.");
         }
     }
+
+    public static void main(String[] args) {
+        double reszta = 9.28;  // przykładowa kwota
+        System.out.println("Wydawanie reszty dla kwoty: " + reszta + "zł");
+        wydajReszte(reszta);
+    }
+}
