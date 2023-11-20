@@ -4,43 +4,35 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //METODA MONTE CARLO
-
-        //Obliczanie pola figury
-
+        // Obliczanie pola figury
         Random rand = new Random();
+        int polef = 0;
 
-        int field = 0;
-        for (int i=0; i<100; i++) {
-            double x = rand.nextInt(701)/1000f;
-            double y = rand.nextInt(701)/1000f + 0.4;
+        for (int i = 0; i < 100; i++) {
+            double x = rand.nextDouble() * 0.7;
+            double y = rand.nextDouble() * 0.3 + 0.4;
 
-            if (Math.pow((x/10), x) >= y) field++;
+            if (Math.pow(x / 10, x) >= y) polef++;
         }
-        System.out.println("Pole figury to " + (double)field/100 + ".");
 
+        System.out.println("Pole figury to " + (double) polef / 100 + ".");
 
-        //Problem wydawania reszty
+        // Problem wydawania reszty
+        Scanner scanner = new Scanner(System.in);
 
-       import java.io.*;
-
-        InputStreamReader str = new InputStreamReader(System.in);
-        BufferedReader wejscie = new BufferedReader(str);
-        String tekst;
-        final int[] M = {500, 200, 100, 50, 20, 10, 5, 2, 1};
+        int[] M = {500, 200, 100, 50, 20, 10, 5, 2, 1};
         int zl, gr, r, ilosc, i;
+
         System.out.println("Podaj resztę..");
         System.out.print("złotych: ");
-        tekst = wejscie.readLine();
-        zl = Integer.parseInt(tekst);
+        zl = scanner.nextInt();
         System.out.print("groszy: ");
-        tekst = wejscie.readLine();
-        gr = Integer.parseInt(tekst);
+        gr = scanner.nextInt();
         r = zl * 100 + gr;
 
         String header = "Nominał (zł) | Ilość";
         System.out.println(header);
-        System.out.println(new String(new char[header.length()]).replace("\0", "-"));
+        System.out.println("-".repeat(header.length()));
 
         for (i = 0; i < M.length; i++) {
             ilosc = 0;
@@ -58,7 +50,7 @@ public class Main {
         } else {
             System.out.println("Nie pozostało niewydanych groszy.");
         }
-    }
-}
+
+        scanner.close();
     }
 }
