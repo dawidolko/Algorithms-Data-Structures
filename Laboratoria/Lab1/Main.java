@@ -5,25 +5,25 @@ public class Main {
 
         // Wyszukiwanie trójek pitagorejskich
         System.out.println("Wyszukiwanie trójek pitagorejskich");
-        int a, b, c, counterA = 0, counterB = 0, counterC = 0, counter = 0;
+        int a, b, c, licznikA = 0, licznikB = 0, licznikC = 0, licznik = 0;
         int par = 20;
 
         for (a = 1; a <= par; a++) {
-            counterA++;
+            licznikA++;
             for (b = a + 1; b <= par; b++) {
-                counterB++;
+                licznikB++;
                 for (c = b + 1; c <= par; c++) {
-                    counterC++;
+                    licznikC++;
                     if (a * a + b * b == c * c) {
-                        counter++;
+                        licznik++;
                         System.out.println("a = " + a + ", b = " + b + ", c = " + c);
                     }
                 }
             }
         }
 
-        System.out.println("Ilość trójek: " + counter);
-        System.out.println("Wykonania pętli (kolejno): " + counterA + " " + counterB + " " + counterC);
+        System.out.println("Ilość trójek: " + licznik);
+        System.out.println("Wykonania pętli (kolejno): " + licznikA + " " + licznikB + " " + licznikC);
 
         // Wypisywanie podzbiorów zbioru o mocy N
         // Pierwsza metoda (mniej efektywna)
@@ -70,7 +70,7 @@ public class Main {
         }
 
         plecak();
-        kosmos();
+        podróżWKosmos();
     }
 
     public static void plecak() {
@@ -125,7 +125,7 @@ public class Main {
         System.out.println("Ten plecak jest wart " + najlepszaWartość);
     }
 
-    public static void kosmos() {
+    public static void podróżWKosmos() {
         // Problem doboru załogi statku kosmicznego
         System.out.println("\n\n\nProblem doboru załogi statku kosmicznego");
         int[][] kosmonauci = { // Tabela umiejętności wiersze-kosmonauci; kolumny-dziedziny
