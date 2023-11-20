@@ -49,6 +49,9 @@ public class kolokwium1v6z1 {
     private static void wypiszWyniki() {
         System.out.println("Dzień, w którym liczba chorych przekroczyła połowę populacji: " + (dzien + 1));
         System.out.println("Liczba chorych w tym dniu: " + chorych);
+        for (int i = 0; i <= dzien; i++) {
+            System.out.println("Dzień: " + (i + 1) + " Chorzy: " + chorzy[i] + " Zdrowi: " + (MAX - (chorzy[i] + ozdrowialych[i])) + " Odporni: " + ozdrowialych[i]);
+        }
     }
 
     public static void main(String[] args) {
