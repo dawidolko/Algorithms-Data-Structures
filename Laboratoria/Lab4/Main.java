@@ -1,41 +1,49 @@
 public class Main {
     public static void main(String[] args) {
-        // METODA PROGRAMOWANIA DYNAMICZNEGO
+        // Metoda programowania dynamicznego
         // Decyzyjny problem plecakowy
 
         // Definicja maksymalnej wagi plecaka.
-        final int maxWeight = 10;
+        final int maksymalnaWaga = 10;
 
         // Tablice przechowujące wagi i wartości dostępnych przedmiotów.
-        final int[] weights = {6, 2, 3, 2, 3, 1};
-        final int[] values = {6, 4, 5, 7, 10, 2};
-        
+        final int[] wagi = {6, 2, 3, 2, 3, 1};
+        final int[] wartości = {6, 4, 5, 7, 10, 2};
+
         // Obliczenie liczby przedmiotów.
-        final int items = weights.length;
+        final int ilośćPrzedmiotów = wagi.length;
 
         // Tablica do przechowywania wyników pośrednich obliczeń dla programowania dynamicznego.
-        int[][] tab = new int[items][maxWeight+1];
+        int[][] tablica = new int[ilośćPrzedmiotów][maksymalnaWaga + 1];
 
         // Inicjalizacja pierwszego wiersza tablicy.
-        for (int i=0;i<maxWeight+1;i++) {
-            if (weights[0]>i) tab[0][i] = 0; // Jeśli pierwszy przedmiot jest cięższy niż aktualna pojemność, wtedy wartość to 0.
-            else tab[0][i] = values[0]; // W przeciwnym razie przyjmuje wartość pierwszego przedmiotu.
+        for (int i = 0; i < maksymalnaWaga + 1; i++) {
+            if (wagi[0] > i) {
+                tablica[0][i] = 0; // Jeśli pierwszy przedmiot jest cięższy niż aktualna pojemność, wtedy wartość to 0.
+            } else {
+                tablica[0][i] = wartości[0]; // W przeciwnym razie przyjmuje wartość pierwszego przedmiotu.
+            }
         }
 
         // Wypełnianie tablicy rozwiązań problemu plecakowego.
-        for (int i=1;i<items;i++) {
-            for (int j=0;j<maxWeight+1;j++) {
-                if (weights[i]>j) 
-                    tab[i][j] = tab[i-1][j]; // Jeśli przedmiot jest cięższy niż aktualna pojemność, przyjmujemy poprzedni wynik.
-                else {
-                    // Wybieramy maksimum z poprzedniego wyniku i sumy wartości aktualnego przedmiotu 
-                    // oraz najlepszego rozwiązania dla plecaka o wadze pomniejszonej o wagę bieżącego przedmiotu.
-                    tab[i][j] = Math.max(tab[i-1][j], values[i]+tab[i-1][j-weights[i]]);
+        for (int i = 1; i < ilośćPrzedmiotów; i++) {
+            for (int j = 0; j < maksymalnaWaga + 1; j++) {
+                if (wagi[i] > j) {
+                    tablica[i][j] = tablica[i - 1][j]; // Jeśli przedmiot jest cięższy niż aktualna pojemność, przyjmujemy poprzedni wynik.
+                } else {
+                    int bezAktualnegoPrzedmiotu = tablica[i - 1][j];
+                    int zAktualnymPrzedmiotem = wartości[i] + tablica[i - 1][j - wagi[i]];
+                    
+                    if (zAktualnymPrzedmiotem > bezAktualnegoPrzedmiotu) {
+                        tablica[i][j] = zAktualnymPrzedmiotem; // Wybieramy większą wartość.
+                    } else {
+                        tablica[i][j] = bezAktualnegoPrzedmiotu;
+                    }
                 }
             }
         }
 
         // Wyświetlenie najlepszej możliwej wartości dla plecaka o zadanej maksymalnej wadze.
-        System.out.println("Najlepsza wartość plecaka to " + tab[items-1][maxWeight] + ".");
+        System.out.println("Najlepsza wartość plecaka to " + tablica[ilośćPrzedmiotów - 1][maksymalnaWaga] + ".");
     }
 }
