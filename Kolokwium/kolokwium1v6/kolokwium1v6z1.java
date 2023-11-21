@@ -1,60 +1,42 @@
 public class kolokwium1v6z1 {
+    // dana jest zamknięta społeczność licząca 100 000 osób
+    private static int wielkoscPopulacji = 100000;
 
-    final static int MAX = 100000; // Całkowita liczba osób w społeczności
-    static int chorych = 10; // Początkowa liczba chorych
-    static int zdrowych = MAX - chorych; // Początkowa liczba zdrowych
-    static int odpornych = 0; // Początkowa liczba odpornych
-    static int dzien = 0; // Licznik dni
-    static int[] chorzy = new int[50]; // Tablica do śledzenia liczby zakażonych każdego dnia
-    static int[] ozdrowialych = new int[50]; // Tablica do śledzenia liczby ozdrowiałych każdego dnia
+    private static int liczbaChorych(int dzien) {
+        int[] chorzy = new int[dzien + 1];
+        // indeks 0 pomijam bo uciążliwe jest to
 
-    public static void symuluj() {
-        for (dzien = 0; dzien < chorzy.length; dzien++) {
-            chorzy[dzien] = chorych;
+        // 1 dzień epidemii - 10 osób chorych na katar
+        chorzy[1] = 10;
 
-            if (dzien > 6) {
-                ozdrowialych[dzien] = chorzy[dzien - 7];
-                chorzy[dzien] -= ozdrowialych[dzien];
-            }
+        for (int i = 2; i <= dzien; i++) {
+            // 50% osób chorych na katar zaraża jeszcze 2 osoby
 
-            odpornych = 0;
-            int startDay;
-            if (dzien > 13) {
-                startDay = dzien - 13;
-            } else {
-                startDay = 0;
-            }
+            double nowiChorzy = Math.floor(chorzy[i - 1] * 0.5 * 2);
+            chorzy[i] = chorzy[i - 1] + (int)nowiChorzy;
 
-            for (int i = startDay; i <= dzien; i++) {
-                odpornych = ozdrowialych[i];
-            }
-
-            chorych -= odpornych;
-            zdrowych = MAX - (chorych + odpornych);
-
-            if (chorych > MAX / 2) {
-                wypiszWyniki();
-                break;
-            } else {
-                int nowoZarazeni = (int)(0.5 * chorzy[dzien]) * 2; // 50% chorych zaraża po 2 osoby
-                if (nowoZarazeni < zdrowych) {
-                    chorych += nowoZarazeni;
-                } else {
-                    chorych += zdrowych;
-                }
+            if (i >= 8) {
+                chorzy[i] -= chorzy[i - 7]; // osoby wyzdrowiałe
             }
         }
-    }
 
-    private static void wypiszWyniki() {
-        System.out.println("Dzień, w którym liczba chorych przekroczyła połowę populacji: " + (dzien + 1));
-        System.out.println("Liczba chorych w tym dniu: " + chorych);
-        for (int i = 0; i <= dzien; i++) {
-            System.out.println("Dzień: " + (i + 1) + " Chorzy: " + chorzy[i] + " Zdrowi: " + (MAX - (chorzy[i] + ozdrowialych[i])) + " Odporni: " + ozdrowialych[i]);
-        }
+        return chorzy[dzien];
     }
 
     public static void main(String[] args) {
-        symuluj();
+        System.out.println("Przebieg epidemii kataru:");
+
+        int dzien = 1;
+        while (true) {
+            int chorzy = liczbaChorych(dzien);
+            System.out.println("Dzień epidemii: " + dzien + ", liczba chorych: " + chorzy);
+
+            if (chorzy >= wielkoscPopulacji / 2) {
+                System.out.println("\n\tLiczba chorych przekroczyła połowę wszystkich mieszkańców.");
+                break;
+            }
+
+            dzien++;
+        }
     }
 }
