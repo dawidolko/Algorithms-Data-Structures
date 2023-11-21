@@ -1,9 +1,13 @@
 import java.util.Random;
 
-public class kolokwiumLody {
+public class Main {
 
     public static void main(String[] args) {
-        int[][] kosztyPrzestawienia = {
+        wykonajSymulacje();
+    }
+
+    private static void wykonajSymulacje() {
+        final int[][] czasy = {
                 {0, 7, 20, -1, 12, 23},
                 {27, 0, 13, 16, -1, 5},
                 {53, -1, 0, 25, 27, 6},
@@ -12,46 +16,55 @@ public class kolokwiumLody {
                 {-1, 24, 1, 17, 5, 0}
         };
 
-        String wynik = znajdzOptymalnaKolejnoscProdukcji(kosztyPrzestawienia, 100);
-        System.out.println(wynik);
-    }
+        StringBuilder lody = new StringBuilder();
+        StringBuilder lodyNajlepsze = new StringBuilder();
+        int czasProdukcjiNajlepszy = Integer.MAX_VALUE;
+        Random random = new Random();
 
-    public static String znajdzOptymalnaKolejnoscProdukcji(int[][] kosztyPrzestawienia, int liczbaProb) {
-        Random rand = new Random();
-        int minSuma = Integer.MAX_VALUE;
-        String najlepszeRozwiazanie = "";
+        for (int i = 0; i < 100; i++) {
+            int czasProdukcji = 0;
+            int[] uzyteLodyTab = new int[]{-1, -1, -1, -1, -1, -1};
+            int uzyteLody = 0;
+            lody = new StringBuilder();
 
-        for (int i = 0; i < liczbaProb; i++) {
-            int suma = 0;
-            String rozwiazanie = "";
-            int[] odwiedzone = new int[kosztyPrzestawienia.length];
-            int aktualnySmak = rand.nextInt(kosztyPrzestawienia.length);
-            odwiedzone[aktualnySmak] = 1;
-            rozwiazanie += (aktualnySmak + 1) + " ";
-
-            for (int j = 1; j < kosztyPrzestawienia.length; j++) {
-                int index = -1;
-                do {
-                    index = rand.nextInt(kosztyPrzestawienia.length);
-                } while (odwiedzone[index] == 1);
-
-                if (kosztyPrzestawienia[aktualnySmak][index] == -1) {
-                    suma = Integer.MAX_VALUE;
-                    break;
+            while (uzyteLody != 6) {
+                int jakaMaszyna = random.nextInt(6);
+                boolean czyMozna = true;
+                for (int k = 0; k < uzyteLody; k++) {
+                    if (uzyteLodyTab[k] == jakaMaszyna) {
+                        czyMozna = false;
+                        break;
+                    }
                 }
-                suma += kosztyPrzestawienia[aktualnySmak][index];
-                aktualnySmak = index;
-                odwiedzone[aktualnySmak] = 1;
-                rozwiazanie += (aktualnySmak + 1) + " ";
+                if (czyMozna) {
+                    uzyteLodyTab[uzyteLody] = jakaMaszyna;
+                    lody.append(jakaMaszyna + 1).append(", ");
+                    uzyteLody++;
+                }
             }
 
-            if (suma < minSuma) {
-                minSuma = suma;
-                najlepszeRozwiazanie = rozwiazanie;
+            for (int j = 0; j < czasy.length - 1; j++) {
+                if (czasy[uzyteLodyTab[j]][uzyteLodyTab[j + 1]] > 0) {
+                    czasProdukcji += czasy[uzyteLodyTab[j]][uzyteLodyTab[j + 1]];
+                } else {
+                    czasProdukcji = Integer.MAX_VALUE;
+                    break;
+                }
+            }
+
+            if (czasProdukcji != Integer.MAX_VALUE && czasy[uzyteLodyTab[5]][uzyteLodyTab[0]] > 0) {
+                czasProdukcji += czasy[uzyteLodyTab[5]][uzyteLodyTab[0]];
+            } else {
+                czasProdukcji = Integer.MAX_VALUE;
+            }
+
+            if (czasProdukcji < czasProdukcjiNajlepszy) {
+                czasProdukcjiNajlepszy = czasProdukcji;
+                lodyNajlepsze = new StringBuilder(lody);
             }
         }
 
-        return "Najlepsza kolejność produkcji to: " + najlepszeRozwiazanie.trim() +
-                "\nMinimalny łączny czas przestawienia: " + (minSuma);
+        System.out.println("Wykorzystane lody: " + lodyNajlepsze);
+        System.out.println("Minimalny czas produkcji: " + czasProdukcjiNajlepszy);
     }
 }
