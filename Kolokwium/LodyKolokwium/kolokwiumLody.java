@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class Main {
+public class kolokwiumLody {
 
     public static void main(String[] args) {
         wykonajSymulacje();
@@ -64,7 +64,7 @@ public class Main {
             }
         }
 
-        System.out.println("Wykorzystane lody: " + lodyNajlepsze);
+        System.out.println("Wykorzystane lody: " + lodyNajlepsze+" i wraca do smaku jaki był na początku.");
         System.out.println("Minimalny czas produkcji: " + czasProdukcjiNajlepszy);
     }
 }
