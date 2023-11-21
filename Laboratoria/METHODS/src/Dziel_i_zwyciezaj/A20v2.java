@@ -17,4 +17,4 @@ public class A20v2
         stare+=mlode;
         if(stare+mlode<=Integer.MAX_VALUE/2) { kroliki(noweMlode,stare,miesiac+1,zobacz); }
     }
-}\
+}
