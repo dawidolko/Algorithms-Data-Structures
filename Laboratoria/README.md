@@ -11,6 +11,8 @@
 
 <hr>
 
+# Skrypt 1 (Materiały do kolokwium 1)
+
 ### [A.1](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A1.java) Decyzyjny problem plecakowy
 
 Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowanych od \( 0 \) do \( 5 \). Każdy przedmiot ma określoną wartość i objętość. Należy zapakować plecak spośród przedmiotów ponumerowanych od \( 0 \) do \( 5 \) w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
@@ -147,7 +149,9 @@ za pomoca których nalezy te sume wydac.
 
 <hr>
 
-# Cześć A: 
+# Skrypt 2 (Materiały do kolokwium 2)
+
+# [Cześć A](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/A): 
 Zadania sprawdzające znajomość implementacji konkretnych struktur danych
 
 ### [Zadanie 1.](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/A/A1_DynArray) 
@@ -168,7 +172,7 @@ Implementacja drzewa BST liczb całkowitych (dst – jedna funkcjonalność, db 
 ### [Zadanie 6.](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/A/A6_HashTable)
 Implementacja tablicy mieszającej metodą łańcuchową (dst – jedna funkcjonalność, db – dwie funkcjonalności, bdb – trzy funkcjonalności)
 
-# Cześć B: 
+# [Cześć B](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/B): 
 Zadania sprawdzające umiejętność implementowania abstrakcyjnych struktur danych przy wykorzystaniu standardowych konkretnych struktur danych
 Przy implementacji można stosować metody: przez osadzanie lub przez dziedziczenie.
 
@@ -217,7 +221,7 @@ Implementacja zbioru za pomocą klasy HashSet (dst – zbiór liczb całkowitych
 
 - Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
 
-# Część C:
+# [Część C](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/C):
 Zadania sprawdzające umiejętność implementowania metod sortowania
 
 ### [Zadanie 1.](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/C) 
