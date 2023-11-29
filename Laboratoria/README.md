@@ -22,7 +22,7 @@ Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowa
 
 Odp: W plecaku o maksymalnej wartości znajdują się przedmioty 1,2,3,4 o wartości 26.
 
-### [A.2](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A2.java) Ogólny problem plecakowy
+### [A.2](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A2.java) Ogólny problem plecakowy
 
 Dany jest plecak o objętości v = 23 oraz nieograniczona liczba egzemplarzy 6 różnych przed- miotów ponumerowanych od 0 do 5. Każdy przedmiot ma określoną wartość Wi i objętość Vi. Należy zapakować plecak spośród przedmiotów ponumerowanych od 0 do 5 w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
 
@@ -34,17 +34,17 @@ Dany jest plecak o objętości v = 23 oraz nieograniczona liczba egzemplarzy 6 r
 Odp: W plecaku o maksymalnej wartości znajdzie się dziesięć przedmiotów z numerem 3 i jeden
 przedmiot z numerem 4. Łączna wartość przedmiotów w plecaku wyniesie 80.
 
-### [A.3](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A3.java) Problem liczby pitagorejskich
+### [A.3](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A3.java) Problem liczby pitagorejskich
 
 Liczby pitagorejskie - to trzy liczby naturalne x, y, z, które spełniają warunek x2 + y2 = z2. Znaleźć wszystkie takie trójki liczb, przy założeniu, że każda z tych liczb ma należy do zbioru {1, ..., 30}.
 
-### [A.4](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A4.java) Problem doboru załogi statku kosmicznego / Podzbiory2Kosmos
+### [A.4](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A4.java) Problem doboru załogi statku kosmicznego / Podzbiory2Kosmos
 
 Organizowana jest załogowa ekspedycja kosmiczna na Marsa. W ramach kompletowania załogi statku kosmicznego główny organizator ekspedycji ma rozwiązać następujący problem. Do jego dyspozycji jest pięciu kosmonautów (k1, k2, k3, k4, k5), którzy przeszli pozytywnie kwalifikację wstępną do udziału w ekspedycji. Na pokładzie specjalnego statku kosmicznego spośród nich będzie potrzebny przynajmniej jeden specjalista w każdej z dziedzin: A, B, C i D. Wiadomym jest, że w dziedzinie A specjalizują się kosmonauci k1 i k4, w dziedzinie B specjalizują się kosmonauci k2, k3 i k4, w dziedzinie C specjalizują się kosmonauci k3 i k5 oraz w dziedzinie D specjalizują się kosmonauci k1, k2 i k5. Ze względu na szczupłość miejsca na pokładzie statku kosmicznego, z powyższej piątki trzeba wybrać jak najmniejszą grupkę kosmonautów, tak aby znajdował się w niej przynajmniej jeden specjalista w każdej z dziedzin A, B, C, D.
 
 Odp: Na Marsa mogą polecieć np. kosmonauci k4 i k5.
 
-### [A.5](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A5.java) Problem wyprodukowania lodów wszystkich smaków
+### [A.5](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A5.java) Problem wyprodukowania lodów wszystkich smaków
 
 Fabryka lodów każdego dnia produkuje na tej samej maszynie lody o sześciu różnych smakach. Zmiana produkcji ze smaku \( i \) na smak \( j \) wymaga przestojenia maszyny, czyli przygotowania (w tym umycia) do nowej produkcji, które trwa określony czas. Podana niżej tablica zawiera informacje o czasach przestojenia maszyny.
 
@@ -61,7 +61,7 @@ Znaleźć kolejność produkcji, przy której całkowity czas przestrojenia masz
 
 Odp: Minimalny całkowity czas przestrojenia maszyny wynosi 63. Oto przykładowa kolejność produkcji lodów, dla której całkowity czas przestrojenia maszyny jest minimalny: 1,2,6,5,3,4,1.
 
-### [A.6](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A6.java) Problem odgadywania liczby
+### [A.6](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A6.java) Problem odgadywania liczby
 Jak odgadnac liczbe pomyslana przez rozmówce z zakresu od 0 do 1000, zadajac jak najmniejsza
 liczbe pytan rozmówcy? Przy czym, pytania zadawane rozmówcy musza byc jedynie
 typu: „Czy to jest liczba 546?”, na które rozmówca moze odpowiadac na jeden z nastepujacych
@@ -88,7 +88,7 @@ połaczenia - zamiast odległosci umieszczono słowo: brak.
 Odp: Najkrótsza droga z Warszawy do Sofii ma długosc 1506 km i prowadzi przez Zakopane oraz
 Budapeszt.
 
-### [A.20](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A20.java) Problem przewidywania liczebnosci populacji królików
+### [A.20](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A20.java) Problem przewidywania liczebnosci populacji królików
 Wroku 1202 Leonardo Fibonacci sformułował nastepujacy, obecnie bardzo popularny w informatyce
 problem, dotyczacy rozmnazania sie królików. Na poczatku mamy pare nowonarodzonych
 królików i o kazdej parze królików zakładamy, ze:
@@ -105,7 +105,7 @@ miesiecy? Liczbe te zwykle oznacza sie przez Fn, jest ona nazywana liczba Fibona
 symulacje majaca na celu stwierdzenie: po ilu miesiacach populacja królików osiagnie:
 100, 1000, 10000, 100000 oraz 1 milion par.
 
-### [A.23](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A23.java) Problem przewidywania przebiegu epidemii
+### [A.23](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A23.java) Problem przewidywania przebiegu epidemii
 W pewnej zamknietej społecznosci liczacej 100000 osób pojawiło sie 10 osób chorych na
 katar, co spowodowało „epidemie kataru”. Wiedzac, ze sposród 10 osób chorych na katar kazda
 zaraza codziennie jeszcze dwie osoby, podac przewidywany przebieg epidemii. W szczególnosci
@@ -115,7 +115,7 @@ i przez ten okres chorzy moga zarazac inne osoby. Oprócz tego osoby, które wyz
 moga juz zachorowac. Jak zmieni sie przebieg epidemii jesli dopuscimy, ze po 2 tygodniach po
 wyzdrowieniu, znowu mozna zachorowac na katar?
 
-### [A.24](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A24.java) Problem rozmnazania bakterii
+### [A.24](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A24.java) Problem rozmnazania bakterii
 Rozwazmy proces rozmnazania bakterii. Zakładamy, ze bakterie znajduja sie w srodowisku o
 stałych parametrach, w zwiazku z czym szybkosc i sposób ich rozmnazania jest stały. Wiadomo,
 ze bakterie rozmnazaja sie przez podział, w którego wyniku z jednej bakterii powstaje 2 nowe.
@@ -123,7 +123,7 @@ Podział ten nastepuje co 2 minuty. Przyjac, ze wszystkie bakterie dziela sie w 
 chwilach. Po jakim czasie liczba bakterii zwiekszy sie 1000 razy, 10000 razy, 100000 razy oraz 1
 mln razy.
 
-### [A.25](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A25.java) Problem łososi i rekinów
+### [A.25](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A25.java) Problem łososi i rekinów
 Pewna rodzina łososi rozwija sie zgodnie z prawem Malthusa, co mozna wyrazic w ten sposób,
 ze jesli wielkosc populacji w chwili t wynosi p(t), to w wyniku naturalnego rozrodu populacji
 w chwili t + 1 jej wielkosc wynosi:
@@ -150,80 +150,100 @@ za pomoca których nalezy te sume wydac.
 # Cześć A: 
 Zadania sprawdzające znajomość implementacji konkretnych struktur danych
 
-1. Implementacja tablicy dynamicznej (dst – tablica liczb całkowitych, db – tablica wartości opakowanych np. klasami Integer, Double, Float lub obiektów typu String, bdb – tablica złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.)
+### 1. 
+Implementacja tablicy dynamicznej (dst – tablica liczb całkowitych, db – tablica wartości opakowanych np. klasami Integer, Double, Float lub obiektów typu String, bdb – tablica złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.)
 
-2. Implementacja uporządkowanej tablicy dynamicznej (dst – tablica liczb całkowitych, db – tablica wartości opakowanych np. klasami Integer, Double, Float lub obiektów typu String, bdb – tablica złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.)
+### 2. 
+Implementacja uporządkowanej tablicy dynamicznej (dst – tablica liczb całkowitych, db – tablica wartości opakowanych np. klasami Integer, Double, Float lub obiektów typu String, bdb – tablica złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.)
 
-3. Implementacja listy powiązanej liczb całkowitych (dst – lista powiązana jednostronna, db – lista powiązana dwustronna, bdb – lista powiązana dwukierunkowa)
+### 3. 
+Implementacja listy powiązanej liczb całkowitych (dst – lista powiązana jednostronna, db – lista powiązana dwustronna, bdb – lista powiązana dwukierunkowa)
 
-4. Implementacja listy powiązanej uporządkowanej liczb całkowitych (dst – lista powiązana jednostronna, db – lista powiązana dwustronna, bdb – lista powiązana dwukierunkowa)
+### 4. 
+Implementacja listy powiązanej uporządkowanej liczb całkowitych (dst – lista powiązana jednostronna, db – lista powiązana dwustronna, bdb – lista powiązana dwukierunkowa)
 
-5. Implementacja drzewa BST liczb całkowitych (dst – jedna funkcjonalność, db – dwie funkcjonalności, bdb – trzy funkcjonalności)
+### 5. 
+Implementacja drzewa BST liczb całkowitych (dst – jedna funkcjonalność, db – dwie funkcjonalności, bdb – trzy funkcjonalności)
 
-6. Implementacja tablicy mieszającej metodą łańcuchową (dst – jedna funkcjonalność, db – dwie funkcjonalności, bdb – trzy funkcjonalności)
+### 6. 
+Implementacja tablicy mieszającej metodą łańcuchową (dst – jedna funkcjonalność, db – dwie funkcjonalności, bdb – trzy funkcjonalności)
 
 # Cześć B: 
 Zadania sprawdzające umiejętność implementowania abstrakcyjnych struktur danych przy wykorzystaniu standardowych konkretnych struktur danych
 Przy implementacji można stosować metody: przez osadzanie lub przez dziedziczenie.
 
-1. Implementacja stosu za pomocą klasy ArrayList (dst – stos liczb całkowitych, db – stos wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – stos złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 1. 
+Implementacja stosu za pomocą klasy ArrayList (dst – stos liczb całkowitych, db – stos wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – stos złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
 
-2. Implementacja stosu za pomocą klasy LinkedList (dst – stos liczb całkowitych, db – stos wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – stos złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 2. 
+Implementacja stosu za pomocą klasy LinkedList (dst – stos liczb całkowitych, db – stos wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – stos złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
 
-3. Implementacja kolejki za pomocą klasy ArrayList (dst – kolejka liczb całkowitych, db – kolejka wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – kolejka złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 3. 
+Implementacja kolejki za pomocą klasy ArrayList (dst – kolejka liczb całkowitych, db – kolejka wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – kolejka złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
 
-4. Implementacja kolejki za pomocą klasy LinkedList (dst – kolejka liczb całkowitych, db – kolejka wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – kolejka złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 4. 
+Implementacja kolejki za pomocą klasy LinkedList (dst – kolejka liczb całkowitych, db – kolejka wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – kolejka złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy strukturę, wstawiamy do struktury A, B, C; usuwamy dwa elementy; wstawiamy D i E; usuwamy wszystkie elementy wypisując je na ekran.
 
-5. Implementacja listy z bezpośrednim dostępem do każdego elementu poprzez podanie jego numeru za pomocą klasy ArrayList (dst – lista liczb całkowitych, db – lista wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – lista złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 5. 
+Implementacja listy z bezpośrednim dostępem do każdego elementu poprzez podanie jego numeru za pomocą klasy ArrayList (dst – lista liczb całkowitych, db – lista wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – lista złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 6 różnych elementów A, B, C, D, E, F (). Przebieg eksperymentu: tworzymy strukturę, wstawiamy do listy A, B, C, D; wypisujemy elementy listy; usuwamy element drugi i trzeci; wypisujemy elementy listy; wstawiamy E i F; wypisujemy elementy listy.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 6 różnych elementów A, B, C, D, E, F (). Przebieg eksperymentu: tworzymy strukturę, wstawiamy do listy A, B, C, D; wypisujemy elementy listy; usuwamy element drugi i trzeci; wypisujemy elementy listy; wstawiamy E i F; wypisujemy elementy listy.
 
-6. Implementacja listy dwustronnej za pomocą klasy LinkedList (dst – lista liczb całkowitych, db – lista wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – lista złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 6. 
+Implementacja listy dwustronnej za pomocą klasy LinkedList (dst – lista liczb całkowitych, db – lista wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – lista złożonych obiektów zdefiniowanych przez użytkownika, np. tablica osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy listę L, wstawiamy do listy L elementy A, B i C od lewej strony; wypisujemy elementy listy; wstawiamy do listy L elementy D i E od prawej strony; wypisujemy elementy listy; usuwamy element z lewej strony i element z prawej strony; wypisujemy elementy listy; sprawdzamy, czy na liście jest element B i wypisujemy wynik testu; sprawdzamy, czy na liście jest element E i wypisujemy wynik testu.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów A, B, C, D, E. Przebieg eksperymentu: tworzymy listę L, wstawiamy do listy L elementy A, B i C od lewej strony; wypisujemy elementy listy; wstawiamy do listy L elementy D i E od prawej strony; wypisujemy elementy listy; usuwamy element z lewej strony i element z prawej strony; wypisujemy elementy listy; sprawdzamy, czy na liście jest element B i wypisujemy wynik testu; sprawdzamy, czy na liście jest element E i wypisujemy wynik testu.
 
-7. Implementacja zbioru za pomocą klasy ArrayList (dst – zbiór liczb całkowitych, db – zbiór wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – zbiór złożonych obiektów zdefiniowanych przez użytkownika, np. zbiór osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 7. 
+Implementacja zbioru za pomocą klasy ArrayList (dst – zbiór liczb całkowitych, db – zbiór wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – zbiór złożonych obiektów zdefiniowanych przez użytkownika, np. zbiór osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
 
-8. Implementacja zbioru za pomocą klasy TreeSet (dst – zbiór liczb całkowitych, db – zbiór wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – zbiór złożonych obiektów zdefiniowanych przez użytkownika, np. zbiór osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 8. 
+Implementacja zbioru za pomocą klasy TreeSet (dst – zbiór liczb całkowitych, db – zbiór wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – zbiór złożonych obiektów zdefiniowanych przez użytkownika, np. zbiór osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
 
-9. Implementacja zbioru za pomocą klasy HashSet (dst – zbiór liczb całkowitych, db – zbiór wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – zbiór złożonych obiektów zdefiniowanych przez użytkownika, np. zbiór osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
+### 9. 
+Implementacja zbioru za pomocą klasy HashSet (dst – zbiór liczb całkowitych, db – zbiór wartości opakowanych np. klasami Double, Float lub obiektów typu String, bdb – zbiór złożonych obiektów zdefiniowanych przez użytkownika, np. zbiór osób [imię nazwisko, wiek], książek [tytuł, wydawnictwo, rok wydania] itp.).
 
- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
+- Wykonać następujący eksperyment ze strukturą w której bierze udział 5 różnych elementów a, b, c, d, e. Przebieg eksperymentu: tworzymy zbiory A i B, wstawiamy do A elementy a, b, c, d oraz do B elementy c, d, e; wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B; usuwamy ze zbioru A element c i ze zbioru B element e; powtórnie wyliczamy i wypisujemy zbiory: iloczyn A i B, suma A i B, różnica A\B.
 
 # Część C: 
 Zadania sprawdzające umiejętność implementowania metod sortowania
 
-1. Implementacja metody sortowania bąbelkowego (bubble sort) dla tablicy liczb całkowitych.
+### 1. 
+Implementacja metody sortowania bąbelkowego (bubble sort) dla tablicy liczb całkowitych.
 
- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
+- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
 
-2. Implementacja metody sortowania przez wybór (selection sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
+### 2. 
+Implementacja metody sortowania przez wybór (selection sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
 
- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
+- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
 
-3. Implementacja metody sortowania przez wstawianie (insertion sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
+### 3. 
+Implementacja metody sortowania przez wstawianie (insertion sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
 
- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
+- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
 
-4. Implementacja metody sortowania szybkiego (quick sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
+### 4. 
+Implementacja metody sortowania szybkiego (quick sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
 
- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
+- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
 
-5. Implementacja metody sortowania przez scalanie (merge sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
+### 5. 
+Implementacja metody sortowania przez scalanie (merge sort) dla tablicy dynamicznej (Array List) liczb całkowitych.
 
- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
+- Wykonać eksperyment polegający na sortowaniu liczb: 5, 6, 3, 2, 8, -4, -9, 9, 0, 1
 
 <hr>
 
