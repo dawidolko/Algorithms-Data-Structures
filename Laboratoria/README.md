@@ -9,7 +9,7 @@
 ### [Lab 8](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab8) - Laboratoria 8
 ### [Lab 9](https://github.com/dawidolko/Algorithms-Data-Structures/tree/main/Laboratoria/Lab9) - Laboratoria 9
 
-### [A.1](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/A1.java) Decyzyjny problem plecakowy
+### [A.1](https://github.com/dawidolko/Algorithms-Data-Structures/blob/main/Laboratoria/sources/A1.java) Decyzyjny problem plecakowy
 
 Dany jest plecak o pojemności \( W = 10 \) oraz \( 6 \) przedmiotów ponumerowanych od \( 0 \) do \( 5 \). Każdy przedmiot ma określoną wartość i objętość. Należy zapakować plecak spośród przedmiotów ponumerowanych od \( 0 \) do \( 5 \) w taki sposób, aby wartość przedmiotów w nim zgromadzonych była największa. Wartości i objętości przedmiotów określone są w poniższej tabeli:
 
